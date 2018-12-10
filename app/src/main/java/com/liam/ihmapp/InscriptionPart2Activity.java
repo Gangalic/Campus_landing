@@ -5,20 +5,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class InscriptionPart1Activity extends AppCompatActivity {
+public class InscriptionPart2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inscription_part1);
+        setContentView(R.layout.activity_inscription_part2);
     }
 
     /**
-     * Lauch the Part2 of the Registration Form
+     * Lauch the third and final part of the Registration form.
      * @param view
      */
-    public void lauchInscriptionPart2(View view) {
-        Intent intent = new Intent(this, InscriptionPart2Activity.class);
+    public void launchInscriptionPart3(View view) {
+        Intent intent = new Intent(this, InscriptionPart3Activity.class);
         startActivity(intent);
     }
 }

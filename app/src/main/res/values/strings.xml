@@ -10,4 +10,10 @@
     <string name="not_a_member">Pas encore membre ?</string>
     <string name="register_text_clickable">Inscrivez-vous !</string>
     <string name="insa_mail">\@insa-lyon.fr</string>
+    <string name="inscription_title">INSCRIPTION</string>
+    <string name="firstname_text">Prénom</string>
+    <string name="lastname_text">Nom</string>
+    <string name="email_text">Email</string>
+    <string name="hint_firstname">Entrez votre prénom</string>
+    <string name="hint_familyname">Entrez votre nom</string>
 </resources>

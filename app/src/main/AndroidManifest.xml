@@ -18,6 +18,10 @@
         </activity>
         <activity android:name=".InscriptionPart1Activity">
         </activity>
+        <activity android:name=".InscriptionPart2Activity">
+        </activity>
+        <activity android:name=".InscriptionPart3Activity">
+        </activity>
     </application>
 
 </manifest>
