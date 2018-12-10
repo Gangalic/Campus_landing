@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">IHM App</string>
+    <string name="my_app_name">MY APP NAME</string>
+    <string name="connexion">Connexion</string>
+    <string name="email">Email</string>
+    <string name="password">Mot de Passe</string>
+    <string name="hint_password">Tapez votre mot de passe</string>
+    <string name="hint_mail">Entrez votre mail INSA</string>
+    <string name="connection_button">Se connecter</string>
+    <string name="not_a_member">Pas encore membre ?</string>
+    <string name="register_text_clickable">Inscrivez-vous !</string>
+    <string name="insa_mail">\@insa-lyon.fr</string>
 </resources>
