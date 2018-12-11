@@ -2,6 +2,7 @@ package com.liam.ihmapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class InscriptionPart3Activity extends AppCompatActivity {
 
@@ -10,4 +11,5 @@ public class InscriptionPart3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inscription_part3);
     }
+
 }
