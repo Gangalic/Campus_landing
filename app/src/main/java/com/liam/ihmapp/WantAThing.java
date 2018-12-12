@@ -15,12 +15,12 @@ public class WantAThing extends AppCompatActivity {
 
     public void launchProfil(View view) {
         Intent intent = new Intent(this, ProfileActivity.class);
-        Intent intent = getIntent();
+        startActivity(intent);
     }
 
     public void launchAccueil(View view) {
         Intent intent = new Intent(this, HomePageActivity.class);
-        Intent intent = getIntent();
+        startActivity(intent);
     }
 }
 
