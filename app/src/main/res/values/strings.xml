@@ -19,4 +19,15 @@
     <string name="_10_pts">10 pts</string>
     <string name="pour_toi">Pour toi</string>
     <string name="profile_image">profile_image</string>
+    <string name="title_activity_loans_list">LoansListActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="demande">Demande</string>
+    <string name="accueil">Accueil</string>
+    <string name="echanges">Echanges</string>
+    <string name="emprents">Mes emprunts</string>
+    <string name="prets">Mes prets</string>
 </resources>
