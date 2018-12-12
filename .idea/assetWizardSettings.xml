@@ -18,7 +18,11 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
+<<<<<<< HEAD
                                       <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/social/ic_person_black_24dp.xml" />
+=======
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/communication/ic_message_black_24dp.xml" />
+>>>>>>> 2135be7604554d70ac1086689fa97bc129ef0b5b
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +32,13 @@
                         </option>
                         <option name="values">
                           <map>
+<<<<<<< HEAD
                             <entry key="outputName" value="ic_person_black_24dp" />
                             <entry key="sourceFile" value="C:\Users\Laura" />
+=======
+                            <entry key="outputName" value="ic_message_black_24dp" />
+                            <entry key="sourceFile" value="C:\Users\Catalin" />
+>>>>>>> 2135be7604554d70ac1086689fa97bc129ef0b5b
                           </map>
                         </option>
                       </PersistentState>

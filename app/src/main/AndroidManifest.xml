@@ -19,7 +19,15 @@
         <activity android:name=".InscriptionPart1Activity"></activity>
         <activity android:name=".InscriptionPart2Activity"></activity>
         <activity android:name=".InscriptionPart3Activity"></activity>
+<<<<<<< HEAD
         <activity android:name=".WantAThing"></activity>
+=======
+        <activity android:name=".HomePageActivity"></activity>
+        <activity
+            android:name=".LoansListActivity"
+            android:label="@string/title_activity_loans_list"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+>>>>>>> 2135be7604554d70ac1086689fa97bc129ef0b5b
     </application>
 
 </manifest>
