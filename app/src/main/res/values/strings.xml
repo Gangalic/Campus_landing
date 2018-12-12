@@ -16,6 +16,19 @@
     <string name="email_text">Email</string>
     <string name="hint_firstname">Entrez votre prénom</string>
     <string name="hint_familyname">Entrez votre nom</string>
+
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="tab_profile_profile">Profil</string>
+    <string name="tab_profile_settings">Paramètres</string>
+
+    <string name="points_text">Points</string>
+    <string name="rating_text">Score</string>
+    <string name="firstname_example">Martine</string>
+    <string name="lastname_example">Martin</string>
+    <string name="rating_example">4.5</string>
+    <string name="points_example">5</string>
+    <string name="my_objects_text">Mes objets</string>
+
     <string name="_10_pts">10 pts</string>
     <string name="pour_toi">Pour toi</string>
     <string name="profile_image">profile_image</string>
