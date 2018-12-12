@@ -15,11 +15,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent intent =  getIntent();
+
     }
 
     public void LogIn(View view) {
-//        Intent intent = new Intent(this, HomePageActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(this, HomePageActivity.class);
+        startActivity(intent);
     }
 
     /**
