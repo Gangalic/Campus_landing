@@ -102,8 +102,8 @@ public class LoansListActivity extends AppCompatActivity {
     }
 
     public void launchExchanges(View view) {
-        //Intent intent = new Intent(this, LoansListActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, LoansListActivity.class);
+        startActivity(intent);
     }
 
     /**
