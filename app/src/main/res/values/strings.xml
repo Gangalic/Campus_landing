@@ -16,4 +16,7 @@
     <string name="email_text">Email</string>
     <string name="hint_firstname">Entrez votre prénom</string>
     <string name="hint_familyname">Entrez votre nom</string>
+    <string name="_10_pts">10 pts</string>
+    <string name="pour_toi">Pour toi</string>
+    <string name="profile_image">profile_image</string>
 </resources>
