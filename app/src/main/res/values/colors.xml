@@ -3,4 +3,6 @@
     <color name="colorPrimary">#87ff58</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#f3585e</color>
+    <color name="colorRedInsa">#e42618</color>
+    <color name="colorBlackInsa">#4f4d50</color>
 </resources>
