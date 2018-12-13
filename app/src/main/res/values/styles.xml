@@ -17,4 +17,13 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="Solidarinsa" parent="AppTheme.NoActionBar">
+        <item name="colorPrimary">@color/colorRedInsa</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="colorAccent">@color/colorRedInsa</item>
+        <item name="android:statusBarColor">@color/colorBlackInsa</item>
+        <item name="android:navigationBarColor">@color/colorBlackInsa</item>
+    </style>
+
+
 </resources>
