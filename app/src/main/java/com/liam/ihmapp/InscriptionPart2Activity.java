@@ -21,7 +21,6 @@ public class InscriptionPart2Activity extends AppCompatActivity {
      */
     public void launchInscriptionPart3(View view) {
         Intent intent = new Intent(this, InscriptionPart3Activity.class);
-        //Intent intent = new Intent(this, ChatActivity.class);
         startActivity(intent);
     }
 }
