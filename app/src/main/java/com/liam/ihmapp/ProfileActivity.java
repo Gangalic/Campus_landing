@@ -1,6 +1,5 @@
 package com.liam.ihmapp;
 
-import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,7 +19,7 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class LoansListActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -40,7 +39,7 @@ public class LoansListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_loans_list);
+        setContentView(R.layout.activity_profile);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -57,13 +56,15 @@ public class LoansListActivity extends AppCompatActivity {
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
+        getIntent();
+
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_loans_list, menu);
+        getMenuInflater().inflate(R.menu.menu_profile, menu);
         return true;
     }
 
@@ -80,21 +81,6 @@ public class LoansListActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void launchNewRequest(View view) {
-        //Intent intent = new Intent(this, WantAThing.class);
-        //startActivity(intent);
-    }
-
-    public void launchHomePage(View view) {
-        //Intent intent = new Intent(this, HomePageActivity.class);
-        //startActivity(intent);
-    }
-
-    public void launchExchanges(View view) {
-        Intent intent = new Intent(this, LoansListActivity.class);
-        startActivity(intent);
     }
 
     /**
@@ -125,7 +111,7 @@ public class LoansListActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_loans_list2, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_profile2, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
@@ -151,7 +137,7 @@ public class LoansListActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
+            // Show 2 total pages.
             return 2;
         }
     }

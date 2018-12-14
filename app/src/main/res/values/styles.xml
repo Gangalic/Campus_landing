@@ -17,4 +17,26 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!-- the app theme -->
+    <style name="Solidarinsa" parent="AppTheme.NoActionBar">
+        <item name="colorPrimary">@color/colorRedInsa</item>
+        <item name="android:textColorPrimary">@color/colorBlackInsa</item>
+        <item name="colorAccent">@color/colorRedInsa</item>
+        <item name="android:statusBarColor">@color/colorBlackInsa</item>
+        <item name="android:navigationBarColor">@color/colorBlackInsa</item>
+
+        <item name="colorButtonNormal">@color/colorBlackInsa</item>
+        <item name="buttonStyle">@style/ButtonStyle</item>
+    </style>
+
+    <style name="ButtonStyle" parent="@style/Widget.AppCompat.Button">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+    <style name="TitleStyle">
+        <item name="android:textSize">@dimen/titleSize</item>
+    </style>
+
+
 </resources>
