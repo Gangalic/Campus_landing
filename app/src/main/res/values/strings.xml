@@ -30,4 +30,22 @@
     <string name="echanges">Echanges</string>
     <string name="emprents">Mes emprunts</string>
     <string name="prets">Mes prets</string>
+    <string name="Casserole">Casserole</string>
+    <string name="validateimage">validateImage</string>
+    <string name="cancelimage">cancelImage</string>
+    <string name="Theo">Theo</string>
+    <string name="pointStar">pointStar</string>
+    <string name="_1">1</string>
+    <string name="pierre">Pierre</string>
+    <string name="_4">4</string>
+    <string name="chaise">Chaise</string>
+    <string name="passoire">Passoire</string>
+    <string name="jean">Jean</string>
+    <string name="pour_tous">Pour tous</string>
+    <string name="_3">3</string>
+    <string name="matelas">Matelas</string>
+    <string name="caroline">Caroline</string>
+    <string name="appareil_raclette">Appareil raclette</string>
+    <string name="sophie">Sophie</string>
+    <string name="_2">2</string>
 </resources>
