@@ -48,7 +48,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="match_constraint"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"

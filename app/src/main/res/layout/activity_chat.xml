@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_orange_light"
+        android:background="@color/colorRedInsa"
         android:orientation="horizontal"
         android:paddingTop="8dp"
         android:paddingBottom="8dp">
