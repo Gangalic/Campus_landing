@@ -28,6 +28,8 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".RatingActivity">
         </activity>
+        <activity android:name=".SharePointsActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -38,5 +38,17 @@
         <item name="android:textSize">@dimen/titleSize</item>
     </style>
 
+    <style name="SharePointsButtons" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/round_button</item>
+    </style>
+
+    <style name="PlusButtons" parent="SharePointsButtons">
+        <item name="android:src">@drawable/ic_add_white_24dp</item>
+    </style>
+
+    <style name="MinusButtons" parent="SharePointsButtons">
+        <item name="android:src">@drawable/ic_remove_white_24dp</item>
+    </style>
+
 
 </resources>
