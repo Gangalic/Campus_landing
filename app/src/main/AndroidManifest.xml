@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.liam.ihmapp">
+          package="com.liam.ihmapp">
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,21 +11,23 @@
         android:theme="@style/Solidarinsa">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".InscriptionPart1Activity"></activity>
-        <activity android:name=".InscriptionPart2Activity"></activity>
-        <activity android:name=".InscriptionPart3Activity"></activity>
-        <activity android:name=".ChatActivity"></activity>
-        <activity android:name=".WantAThing"></activity>
-        <activity android:name=".HomePageActivity"></activity>
+        <activity android:name=".InscriptionPart1Activity"/>
+        <activity android:name=".InscriptionPart2Activity"/>
+        <activity android:name=".InscriptionPart3Activity"/>
+        <activity android:name=".ChatActivity"/>
+        <activity android:name=".WantAThing"/>
+        <activity android:name=".HomePageActivity"/>
         <activity
             android:name=".LoansListActivity"
             android:label="@string/title_activity_loans_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".RatingActivity">
+        </activity>
     </application>
 
 </manifest>
