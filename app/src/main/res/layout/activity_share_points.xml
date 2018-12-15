@@ -148,18 +148,19 @@
 
         <ImageButton
             android:id="@+id/imageButton14"
-            style="@style/PlusButtons"
+            style="@style/MinusButtons"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_weight="1"
+            android:onClick="MinusPoint"
             app:srcCompat="@drawable/ic_remove_white_24dp"
             tools:layout_editor_absoluteX="148dp"
             tools:layout_editor_absoluteY="334dp"/>
 
         <TextView
-            android:id="@+id/textView39"
+            android:id="@+id/pointsShared"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -176,13 +177,14 @@
 
         <ImageButton
             android:id="@+id/imageButton15"
-            style="@style/MinusButtons"
+            style="@style/PlusButtons"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_weight="1"
+            android:onClick="PlusPoint"
             app:srcCompat="@drawable/ic_add_white_24dp"
             tools:layout_editor_absoluteX="326dp"
             tools:layout_editor_absoluteY="374dp"/>
