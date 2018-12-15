@@ -16,13 +16,13 @@ public class HomePageActivity extends AppCompatActivity {
     }
 
     public void launchProfile(View view) {
-        //Intent intent = new Intent(this, ProfileActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
     }
 
     public void launchNewRequest(View view) {
-        //Intent intent = new Intent(this, WantAThing.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, WantAThing.class);
+        startActivity(intent);
     }
 
     public void launchHomePage(View view) {
