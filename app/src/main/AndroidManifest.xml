@@ -30,6 +30,8 @@
         </activity>
         <activity android:name=".SharePointsActivity">
         </activity>
+        <activity android:name=".FAQActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -29,8 +29,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void RegisterForm(View view) {
-        //Intent intent = new Intent(this, InscriptionPart1Activity.class);
-        Intent intent = new Intent(this, SharePointsActivity.class);
+        Intent intent = new Intent(this, InscriptionPart1Activity.class);
         startActivity(intent);
     }
 }
