@@ -28,6 +28,7 @@ public class InscriptionPart1Activity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 setEmail();
+                firstName.setBackgroundColor(getResources().getColor(R.color.colorWhite));
             }
 
             // unused but declared
@@ -41,6 +42,7 @@ public class InscriptionPart1Activity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 setEmail();
+                lastName.setBackgroundColor(getResources().getColor(R.color.colorWhite));
             }
 
             // unused but declared
@@ -59,14 +61,35 @@ public class InscriptionPart1Activity extends AppCompatActivity {
         String lName = valueOf(lastName.getText().toString());
 
         eMail.setText(fName + "." + lName);
+        eMail.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+    }
+
+    private boolean checkFields(){
+        String fName = valueOf(firstName.getText().toString());
+        String lName = valueOf(lastName.getText().toString());
+        String mail = valueOf(eMail.getText().toString());
+
+        if (fName.length() == 0 || lName.length() == 0){
+            if(fName.length() == 0)
+                firstName.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            if(lName.length() == 0)
+                lastName.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            if(mail.length() == 0)
+                eMail.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            return false;
+        } else {
+            return true;
+        }
     }
 
     /**
      * Lauch the Part2 of the Registration Form
      * @param view
      */
-    public void lauchInscriptionPart2(View view) {
-        Intent intent = new Intent(this, InscriptionPart2Activity.class);
-        startActivity(intent);
+    public void launchInscriptionPart2(View view) {
+        if(checkFields()) {
+            Intent intent = new Intent(this, InscriptionPart2Activity.class);
+            startActivity(intent);
+        }
     }
 }
