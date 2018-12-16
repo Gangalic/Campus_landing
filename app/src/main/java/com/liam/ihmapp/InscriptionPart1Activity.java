@@ -57,8 +57,8 @@ public class InscriptionPart1Activity extends AppCompatActivity {
 
     private void setEmail(){
 
-        String fName = valueOf(firstName.getText().toString());
-        String lName = valueOf(lastName.getText().toString());
+        String fName = valueOf(firstName.getText().toString()).toLowerCase();
+        String lName = valueOf(lastName.getText().toString()).toLowerCase();
 
         eMail.setText(fName + "." + lName);
         eMail.setBackgroundColor(getResources().getColor(R.color.colorWhite));

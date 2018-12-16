@@ -70,7 +70,7 @@
             tools:layout_editor_absoluteY="340dp"/>
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/repeatPassword"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:ems="10"
@@ -104,7 +104,7 @@
             tools:layout_editor_absoluteY="260dp"/>
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/insertPassword"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:ems="10"
@@ -113,5 +113,16 @@
             tools:layout_editor_absoluteX="138dp"
             tools:layout_editor_absoluteY="294dp"/>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/passwordErrorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorRedInsa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageButton" />
 
 </android.support.constraint.ConstraintLayout>
