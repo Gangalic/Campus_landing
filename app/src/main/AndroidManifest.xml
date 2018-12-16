@@ -26,12 +26,10 @@
             android:name=".LoansListActivity"
             android:label="@string/title_activity_loans_list"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".RatingActivity">
-        </activity>
-        <activity android:name=".SharePointsActivity">
-        </activity>
-        <activity android:name=".FAQActivity">
-        </activity>
+        <activity android:name=".RatingActivity"></activity>
+        <activity android:name=".SharePointsActivity"></activity>
+        <activity android:name=".FAQActivity"></activity>
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>
