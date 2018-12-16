@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     tools:context=".WantAThing">
 
     <LinearLayout
@@ -58,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
-        android:text="Categorie"
+        android:text="@string/categoryMandatory"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/textView14"
         app:layout_constraintTop_toTopOf="parent" />
@@ -68,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Element"
+        android:text="@string/elementMandatory"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/textView15"
         app:layout_constraintTop_toBottomOf="@+id/editText9" />
@@ -78,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Depuis"
+        android:text="@string/startDateMandatory"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/textView17"
         app:layout_constraintTop_toBottomOf="@+id/editText8" />
@@ -89,7 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="30dp"
-        android:text="Comentaire"
+        android:text="@string/comment"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText5" />
@@ -99,7 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="29dp"
         android:layout_marginStart="148dp"
-        android:text="Temps"
+        android:text="@string/periodExample"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView15"
         app:layout_constraintStart_toEndOf="@+id/textView15" />
@@ -109,7 +110,7 @@
         android:layout_width="318dp"
         android:layout_height="81dp"
         android:ems="10"
-        android:hint="@string/addComment"
+        android:hint="@string/addCommentExample"
         android:inputType="textMultiLine"
         app:layout_constraintStart_toStartOf="@+id/textView17"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
@@ -186,6 +187,7 @@
         android:layout_height="35dp"
         android:layout_marginTop="25dp"
         android:background="@color/colorPrimary"
+        android:onClick="launchExchanges"
         android:text="VALIDER"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
