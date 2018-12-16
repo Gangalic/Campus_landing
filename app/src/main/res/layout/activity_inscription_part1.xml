@@ -78,7 +78,7 @@
             tools:layout_editor_absoluteY="438dp">
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/INSAMail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -121,7 +121,7 @@
             tools:layout_editor_absoluteY="300dp"/>
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/lastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -155,7 +155,7 @@
             tools:layout_editor_absoluteY="226dp"/>
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/firstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
