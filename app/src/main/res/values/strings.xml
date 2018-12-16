@@ -63,5 +63,9 @@
     <string name="exchanges">Mes echanges</string>
     <string name="faq">FAQ</string>
     <string name="chat">CHAT</string>
+    <string name="addComment">Écrivez ici tout ce que vous voulez dire sur l\'objet dont vous avez besoin</string>
+    <string name="elementExample">Eco-cup</string>
+    <string name="categoryExample">Cuisine</string>
+    <string name="dateExample">01.01.2018</string>
 </resources>
 
