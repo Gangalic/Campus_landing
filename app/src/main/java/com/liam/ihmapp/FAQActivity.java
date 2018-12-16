@@ -2,6 +2,8 @@ package com.liam.ihmapp;
 
 import android.animation.LayoutTransition;
 import android.content.Intent;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,10 +36,19 @@ public class FAQActivity extends AppCompatActivity {
         faq1Image = (ImageView) findViewById(R.id.faq_img_1);
         faq1Title = (TextView) findViewById(R.id.faq1_title);
 
+
         faq2Layout = (LinearLayout) findViewById(R.id.faq2_layout);
         faq2Image = (ImageView) findViewById(R.id.faq_img_2);
         faq2Title = (TextView) findViewById(R.id.faq2_title);
 
+
+    }
+
+    @Override
+    public void onPostCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
+        super.onPostCreate(savedInstanceState, persistentState);
+        initFAQLayout(faq1Layout,faq1Title);
+        initFAQLayout(faq2Layout,faq2Title);
     }
 
     public void launchProfile(View view) {
@@ -88,9 +99,7 @@ public class FAQActivity extends AppCompatActivity {
                 break;
             case 1:
                 lay.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
-                LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) lay.getLayoutParams();
-                params.height = title.getHeight();
-                lay.setLayoutParams(params);
+                initFAQLayout(lay,title);
                 img.setImageResource(R.drawable.ic_faq_hidden_24dp);
                 clicked = 0;
                 break;
@@ -99,5 +108,10 @@ public class FAQActivity extends AppCompatActivity {
         return clicked;
     }
 
+    public void initFAQLayout(LinearLayout lay,TextView title){
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) lay.getLayoutParams();
+        params.height = title.getHeight() + 2*lay.getPaddingTop();
+        lay.setLayoutParams(params);
+    }
 
 }
