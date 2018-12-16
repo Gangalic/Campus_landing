@@ -13,4 +13,10 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
     }
 
+    public void launchProfile(View view) {
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
+    }
+
+
 }

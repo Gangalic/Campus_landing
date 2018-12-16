@@ -13,32 +13,32 @@
         android:layout_height="wrap_content"
         android:background="@color/colorRedInsa"
         android:orientation="horizontal"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp">
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <ImageView
             android:id="@+id/person_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_person_24dp"/>
+            android:layout_weight="9"
+            app:srcCompat="@drawable/profile_up_icon"/>
 
         <TextView
             android:id="@+id/chatTitle_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="4"
             android:gravity="center"
-            android:text="CHAT"
-            android:textSize="20sp"/>
+            android:text="@string/chat"
+            android:textSize="@dimen/pointSize"/>
 
         <TextView
             android:id="@+id/points_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="8"
             android:gravity="center"
-            android:text="10 PTS"
+            android:text="@string/_10_pts"
             android:textSize="20sp"/>
     </LinearLayout>
 

@@ -20,7 +20,7 @@
             android:id="@+id/person_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="9"
             android:onClick="launchProfile"
             app:srcCompat="@drawable/ic_person_24dp"/>
 
@@ -28,21 +28,21 @@
             android:id="@+id/chatTitle_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="5"
             android:gravity="center"
-            android:text="FAQ"
+            android:text="@string/faq"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/titleSize"/>
+            android:textSize="@dimen/pointSize"/>
 
         <TextView
             android:id="@+id/points_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="8"
             android:gravity="center"
-            android:text="10 PTS"
+            android:text="@string/_10_pts"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/titleSize"/>
+            android:textSize="@dimen/pointSize"/>
     </LinearLayout>
 
 
