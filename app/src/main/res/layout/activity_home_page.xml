@@ -1,62 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePageActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomePageActivity"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/colorRedInsa"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="34dp"
+        <ImageView
+            android:id="@+id/person_image"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
             android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:contentDescription="@drawable/profile_up_icon"
             android:onClick="launchProfile"
-            android:paddingStart="5dp"
-            android:paddingTop="5dp"
-            android:paddingEnd="5dp"
-            android:paddingBottom="5dp"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/profile_up_icon" />
+            app:srcCompat="@drawable/ic_person_24dp"/>
 
         <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
+            android:id="@+id/chatTitle_text"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="10" />
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="HOME"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/titleSize"/>
 
         <TextView
-            android:id="@+id/textView14"
-            android:layout_width="75dp"
+            android:id="@+id/points_text"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/_10_pts"
-            android:textSize="20sp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"/>
     </LinearLayout>
 
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="0dp"
-        android:layout_height="456dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
@@ -64,7 +58,7 @@
 
         <LinearLayout
             android:id="@+id/linearLayout1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/scrollView2"
@@ -80,171 +74,105 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/pour_toi"
-                android:textSize="25sp" />
+                android:textSize="25sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="45dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/layout_bg"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="31dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView16"
-                        android:layout_width="172dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="1"
-                        android:text="@string/Casserole"
-                        android:textSize="20sp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton3"
-                        android:layout_width="60dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/checkbox_on_background"
-                        android:contentDescription="@string/validateimage" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton4"
-                        android:layout_width="60dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/checkbox_off_background"
-                        android:contentDescription="@string/cancelimage"
-                        app:srcCompat="@android:drawable/ic_delete" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView18"
-                        android:layout_width="132dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="15dp"
-                        android:layout_weight="1"
-                        android:text="@string/Theo"
-                        android:textSize="20sp" />
-
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="9dp"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
                         android:layout_weight="1"
-                        android:contentDescription="@string/pointStar"
-                        android:paddingStart="20dp"
-                        android:paddingEnd="0dp"
-                        android:paddingBottom="5dp"
-                        app:srcCompat="@drawable/ic_star_24dp" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView19"
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text="@string/Casserole"
+                            android:textSize="20sp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView20"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/Theo"
+                                android:textSize="20sp"/>
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription="@string/pointStar"
+                                app:srcCompat="@drawable/ic_star_24dp"/>
+
+                            <TextView
+                                android:id="@+id/textView21"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="top|start"
+                                android:text="@string/_1"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
                         android:layout_weight="1"
-                        android:gravity="top|start"
-                        android:paddingBottom="5dp"
-                        android:text="@string/_1"
-                        android:textSize="20sp" />
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
-            </LinearLayout>
+                        <ImageButton
+                            android:id="@+id/imageButton1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/holo_green_light"
+                            android:contentDescription="@string/validateimage"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_done_24dp"/>
 
-            <LinearLayout
-                android:layout_width="288dp"
-                android:layout_height="63dp"
-                android:layout_marginStart="45dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/layout_bg"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="31dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView17"
-                        android:layout_width="172dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="1"
-                        android:text="@string/chaise"
-                        android:textSize="20sp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton5"
-                        android:layout_width="60dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/checkbox_on_background"
-                        android:contentDescription="@string/validateimage" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton6"
-                        android:layout_width="60dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/checkbox_off_background"
-                        android:contentDescription="@string/cancelimage"
-                        app:srcCompat="@android:drawable/ic_delete" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="128dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="15dp"
-                        android:layout_weight="1"
-                        android:text="@string/pierre"
-                        android:textSize="20sp" />
-
-                    <ImageView
-                        android:id="@+id/imageView1"
-                        android:layout_width="9dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/pointStar"
-                        android:paddingStart="20dp"
-                        android:paddingEnd="0dp"
-                        android:paddingBottom="5dp"
-                        app:srcCompat="@drawable/ic_star_24dp" />
-
-                    <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="top|start"
-                        android:text="@string/_4"
-                        android:textSize="20sp" />
+                        <ImageButton
+                            android:id="@+id/imageButton2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/colorRedInsa"
+                            android:contentDescription="@string/cancelimage"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/ic_clear_24dp"/>
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -253,84 +181,205 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="45dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/layout_bg"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="31dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView22"
-                        android:layout_width="172dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="1"
-                        android:text="@string/passoire"
-                        android:textSize="20sp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton7"
-                        android:layout_width="60dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/checkbox_on_background"
-                        android:contentDescription="@string/validateimage" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton8"
-                        android:layout_width="60dp"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="10dp"
+                        android:layout_marginLeft="12dp"
                         android:layout_weight="1"
-                        android:background="@android:drawable/checkbox_off_background"
-                        android:contentDescription="@string/cancelimage"
-                        app:srcCompat="@android:drawable/ic_delete" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text="@string/chaise"
+                            android:textSize="20sp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView18"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/pierre"
+                                android:textSize="20sp"/>
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription="@string/pointStar"
+                                app:srcCompat="@drawable/ic_star_24dp"/>
+
+                            <TextView
+                                android:id="@+id/textView19"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="top|start"
+                                android:text="@string/_4"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageButton3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/holo_green_light"
+                            android:contentDescription="@string/validateimage"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_done_24dp"/>
+
+                        <ImageButton
+                            android:id="@+id/imageButton4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/colorRedInsa"
+                            android:contentDescription="@string/cancelimage"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/ic_clear_24dp"/>
+                    </LinearLayout>
 
                 </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/layout_bg"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView23"
-                        android:layout_width="132dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="15dp"
-                        android:layout_weight="1"
-                        android:text="@string/jean"
-                        android:textSize="20sp" />
-
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="9dp"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
                         android:layout_weight="1"
-                        android:contentDescription="@string/pointStar"
-                        android:paddingStart="20dp"
-                        android:paddingEnd="0dp"
-                        android:paddingBottom="5dp"
-                        app:srcCompat="@drawable/ic_star_24dp" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView24"
+                        <TextView
+                            android:id="@+id/textView40"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text="@string/passoire"
+                            android:textSize="20sp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView41"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/jean"
+                                android:textSize="20sp"/>
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription="@string/pointStar"
+                                app:srcCompat="@drawable/ic_star_24dp"/>
+
+                            <TextView
+                                android:id="@+id/textView43"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="top|start"
+                                android:text="@string/_4"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
                         android:layout_weight="1"
-                        android:gravity="top|start"
-                        android:text="@string/_4"
-                        android:textSize="20sp" />
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageButton5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/holo_green_light"
+                            android:contentDescription="@string/validateimage"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_done_24dp"/>
+
+                        <ImageButton
+                            android:id="@+id/imageButton6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/colorRedInsa"
+                            android:contentDescription="@string/cancelimage"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/ic_clear_24dp"/>
+                    </LinearLayout>
 
                 </LinearLayout>
+
             </LinearLayout>
 
             <TextView
@@ -340,172 +389,210 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/pour_tous"
-                android:textSize="25sp" />
+                android:textSize="25sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="45dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/layout_bg"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="31dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView26"
-                        android:layout_width="172dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="1"
-                        android:text="@string/matelas"
-                        android:textSize="20sp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton9"
-                        android:layout_width="60dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/checkbox_on_background"
-                        android:contentDescription="@string/validateimage" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton10"
-                        android:layout_width="60dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/checkbox_off_background"
-                        android:contentDescription="@string/cancelimage"
-                        app:srcCompat="@android:drawable/ic_delete" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView27"
-                        android:layout_width="132dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="15dp"
-                        android:layout_weight="1"
-                        android:text="@string/caroline"
-                        android:textSize="20sp" />
-
-                    <ImageView
-                        android:id="@+id/imageView4"
-                        android:layout_width="9dp"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
                         android:layout_weight="1"
-                        android:contentDescription="@string/pointStar"
-                        android:paddingStart="20dp"
-                        android:paddingEnd="0dp"
-                        android:paddingBottom="5dp"
-                        app:srcCompat="@drawable/ic_star_24dp" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView28"
+                        <TextView
+                            android:id="@+id/textView46"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text="@string/matelas"
+                            android:textSize="20sp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView47"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/caroline"
+                                android:textSize="20sp"/>
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription="@string/pointStar"
+                                app:srcCompat="@drawable/ic_star_24dp"/>
+
+                            <TextView
+                                android:id="@+id/textView48"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="top|start"
+                                android:text="@string/_3"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
                         android:layout_weight="1"
-                        android:gravity="top|start"
-                        android:text="@string/_3"
-                        android:textSize="20sp" />
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageButton7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/holo_green_light"
+                            android:contentDescription="@string/validateimage"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_done_24dp"/>
+
+                        <ImageButton
+                            android:id="@+id/imageButton8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/colorRedInsa"
+                            android:contentDescription="@string/cancelimage"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/ic_clear_24dp"/>
+                    </LinearLayout>
 
                 </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="45dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/layout_bg"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="31dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView29"
-                        android:layout_width="172dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="1"
-                        android:text="@string/appareil_raclette"
-                        android:textSize="20sp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton11"
-                        android:layout_width="60dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/checkbox_on_background"
-                        android:contentDescription="@string/validateimage" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton12"
-                        android:layout_width="60dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/checkbox_off_background"
-                        android:contentDescription="@string/cancelimage"
-                        app:srcCompat="@android:drawable/ic_delete" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView30"
-                        android:layout_width="132dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="15dp"
-                        android:layout_weight="1"
-                        android:text="@string/sophie"
-                        android:textSize="20sp" />
-
-                    <ImageView
-                        android:id="@+id/imageView6"
-                        android:layout_width="9dp"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
                         android:layout_weight="1"
-                        android:contentDescription="@string/pointStar"
-                        android:paddingStart="20dp"
-                        android:paddingEnd="0dp"
-                        android:paddingBottom="5dp"
-                        app:srcCompat="@drawable/ic_star_24dp" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView31"
+                        <TextView
+                            android:id="@+id/textView50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text="@string/appareil_raclette"
+                            android:textSize="20sp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView51"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/sophie"
+                                android:textSize="20sp"/>
+
+                            <ImageView
+                                android:id="@+id/imageView9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription="@string/pointStar"
+                                app:srcCompat="@drawable/ic_star_24dp"/>
+
+                            <TextView
+                                android:id="@+id/textView52"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="top|start"
+                                android:text="@string/_2"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
                         android:layout_weight="1"
-                        android:gravity="top|start"
-                        android:text="@string/_2"
-                        android:textSize="20sp" />
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageButton10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/holo_green_light"
+                            android:contentDescription="@string/validateimage"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_done_24dp"/>
+
+                        <ImageButton
+                            android:id="@+id/imageButton11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/colorRedInsa"
+                            android:contentDescription="@string/cancelimage"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/ic_clear_24dp"/>
+                    </LinearLayout>
 
                 </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
@@ -513,7 +600,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorRedInsa"
         android:orientation="horizontal"
@@ -557,4 +644,4 @@
     </LinearLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

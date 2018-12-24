@@ -68,5 +68,31 @@
     <string name="startDateMandatory">Depuis *</string>
     <string name="comment">Comentaire</string>
     <string name="periodExample">Temps *</string>
+
+    <string name="category">Choix de Catégories</string>
+    <string name="category1">Cuisine</string>
+    <string name="category2">Electroménager</string>
+    <string name="category3">Informatique</string>
+    <string name="category4">Sport</string>
+    <string name="category5">Entretien</string>
+    <string name="category6">Bricolage</string>
+    <string name="category7">Livres</string>
+    <string name="category8">Autre</string>
+    <string name="cuisine">Choix objet dans la catégorie Cuisine</string>
+    <string name="sport">Choix objet dans la catégorie Sport</string>
+    <string name="sport1">Ballon de Foot</string>
+    <string name="sport2">Ballon de Rugby</string>
+    <string name="sport3">Ballon de Basket</string>
+    <string name="sport4">Ballon de Hand</string>
+    <string name="sport5">Raquette de Tennis</string>
+    <string name="sport6">Autre</string>
+    <string name="cuisine1">Casserole</string>
+    <string name="cuisine2">Cocotte Minute</string>
+    <string name="cuisine3">Poelle</string>
+    <string name="cuisine4">Passoire</string>
+    <string name="cuisine5">Moules</string>
+    <string name="cuisine6">Autre</string>
+
 </resources>
+
 

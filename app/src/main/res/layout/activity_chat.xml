@@ -20,25 +20,27 @@
             android:id="@+id/person_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="9"
-            app:srcCompat="@drawable/profile_up_icon"/>
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_person_24dp"/>
 
         <TextView
             android:id="@+id/chatTitle_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="4"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="@string/chat"
-            android:textSize="@dimen/pointSize"/>
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/titleSize"/>
 
         <TextView
             android:id="@+id/points_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="8"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="@string/_10_pts"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp"/>
     </LinearLayout>
 
