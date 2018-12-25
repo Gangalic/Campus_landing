@@ -8,32 +8,41 @@
     android:background="@color/colorWhite"
     tools:context=".InscriptionPart2Activity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:id="@+id/linearLayout19"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/inscription_title"
-        android:textSize="@dimen/titleSize"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
+        <ImageButton
+            android:id="@+id/imageButton2"
+            style="@style/SharePointsButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:onClick="launchBack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_arrow_back_white_24dp"/>
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        android:onClick="launchInscriptionPart3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
-        app:srcCompat="@drawable/ic_arrow_forward_black_24dp"
-        />
+        <ImageButton
+            android:id="@+id/imageButton"
+            style="@style/SharePointsButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="launchInscriptionPart3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_arrow_forward_white_24dp"/>
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView"
@@ -44,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout17"
         app:srcCompat="@drawable/logo_solidarinsa"/>
 
     <LinearLayout
@@ -54,8 +63,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,6 +89,15 @@
             android:inputType="textPassword"
             tools:layout_editor_absoluteX="103dp"
             tools:layout_editor_absoluteY="370dp"/>
+
+        <TextView
+            android:id="@+id/passwordErrorMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorRedInsa"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="208dp"
+            tools:layout_editor_absoluteY="430dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -113,17 +132,38 @@
             android:inputType="textPassword"
             tools:layout_editor_absoluteX="138dp"
             tools:layout_editor_absoluteY="294dp"/>
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/passwordErrorMessage"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout17"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:textStyle="bold"
-        android:textColor="@color/colorRedInsa"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inscription_title"
+            android:textSize="@dimen/titleSize"
+            tools:layout_editor_absoluteX="197dp"
+            tools:layout_editor_absoluteY="32dp"/>
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/inscription2"/>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

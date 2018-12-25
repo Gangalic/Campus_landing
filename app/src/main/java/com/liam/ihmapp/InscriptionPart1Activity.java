@@ -28,7 +28,11 @@ public class InscriptionPart1Activity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 setEmail();
-                firstName.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+                if (firstName.getText().toString().length() <= 0) {
+                    firstName.setError("Vous devez renseigner votre prénom");
+                } else {
+                    firstName.setError(null);
+                }
             }
 
             // unused but declared
@@ -42,7 +46,28 @@ public class InscriptionPart1Activity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 setEmail();
-                lastName.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+                if (lastName.getText().toString().length() <= 0) {
+                    lastName.setError("Vous devez renseigner votre nom");
+                } else {
+                    lastName.setError(null);
+                }
+            }
+
+            // unused but declared
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+
+        eMail.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (eMail.getText().toString().length() <= 0) {
+                    eMail.setError("Vous devez renseigner votre Email");
+                } else {
+                    eMail.setError(null);
+                }
             }
 
             // unused but declared
@@ -70,12 +95,15 @@ public class InscriptionPart1Activity extends AppCompatActivity {
         String mail = valueOf(eMail.getText().toString());
 
         if (fName.length() == 0 || lName.length() == 0){
-            if(fName.length() == 0)
-                firstName.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            if(lName.length() == 0)
-                lastName.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            if(mail.length() == 0)
-                eMail.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            if (firstName.getText().toString().trim().equalsIgnoreCase("")) {
+                firstName.setError("Vous devez renseigner votre prénom");
+            }
+            if (lastName.getText().toString().trim().equalsIgnoreCase("")) {
+                lastName.setError("Vous devez renseigner votre nom");
+            }
+            if (eMail.getText().toString().trim().equalsIgnoreCase("")) {
+                eMail.setError("Vous devez renseigner votre email");
+            }
             return false;
         } else {
             return true;
@@ -83,7 +111,7 @@ public class InscriptionPart1Activity extends AppCompatActivity {
     }
 
     /**
-     * Lauch the Part2 of the Registration Form
+     * Launch the Part2 of the Registration Form
      * @param view
      */
     public void launchInscriptionPart2(View view) {
@@ -91,5 +119,14 @@ public class InscriptionPart1Activity extends AppCompatActivity {
             Intent intent = new Intent(this, InscriptionPart2Activity.class);
             startActivity(intent);
         }
+    }
+
+    /**
+     * Come back to the initial page MainActivity
+     * @param view
+     */
+    public void launchBack(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

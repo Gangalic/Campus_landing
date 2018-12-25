@@ -7,6 +7,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import static java.lang.String.valueOf;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +27,11 @@ public class MainActivity extends AppCompatActivity {
         email.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                email.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+                if (email.getText().toString().length() <= 0) {
+                    email.setError("Enter FirstName");
+                } else {
+                    email.setError(null);
+                }
             }
 
             // unused but declared
@@ -38,7 +44,11 @@ public class MainActivity extends AppCompatActivity {
         password.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                password.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+                if (password.getText().toString().length() <= 0) {
+                    password.setError("Enter FirstName");
+                } else {
+                    password.setError(null);
+                }
             }
 
             // unused but declared
@@ -63,10 +73,12 @@ public class MainActivity extends AppCompatActivity {
         String mail = valueOf(email.getText().toString());
         String pass = valueOf(password.getText().toString());
         if (mail.length() == 0 || pass.length() == 0){
-            if(mail.length() == 0)
-                email.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            if(pass.length() == 0)
-                password.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            if (email.getText().toString().trim().equalsIgnoreCase("")) {
+                email.setError("L\'email doit être renseigné");
+            }
+            if (password.getText().toString().trim().equalsIgnoreCase("")) {
+                password.setError("Le mot de passe doit être renseigné");
+            }
             return false;
         } else {
             return true;

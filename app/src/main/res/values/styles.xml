@@ -38,9 +38,14 @@
         <item name="android:textSize">@dimen/titleSize</item>
     </style>
 
+    <style name="ObjectCategoryButtons" parent="@style/Widget.AppCompat.Button">
+        <item name="colorButtonNormal">@color/colorRedInsa</item>
+        <item name="android:background">@color/colorRedInsa</item>
+    </style>
+
     <!-- Round button style -->
     <style name="SharePointsButtons" parent="Widget.AppCompat.Button">
-        <item name="android:background">@drawable/round_button</item>
+        <item name="android:background">@drawable/round_square_shape</item>
     </style>
 
     <style name="PlusButtons" parent="SharePointsButtons">
