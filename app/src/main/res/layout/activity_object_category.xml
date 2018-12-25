@@ -45,23 +45,25 @@
 
                 <ImageButton
                     android:id="@+id/imageButton9"
-                    style="@style/ObjectCategoryButtons"
+                    style="@style/SharePointsButtons"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="8dp"
                     android:layout_weight="1"
+                    android:onClick="launchCategory"
                     android:paddingTop="8dp"
                     app:srcCompat="@drawable/kitchen"/>
 
                 <ImageButton
                     android:id="@+id/imageButton12"
-                    style="@style/ObjectCategoryButtons"
+                    style="@style/SharePointsButtons"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="4dp"
                     android:layout_marginBottom="8dp"
                     android:layout_weight="1"
+                    android:onClick="launchCategory"
                     android:paddingTop="8dp"
                     app:srcCompat="@drawable/clean"/>
             </LinearLayout>
@@ -73,23 +75,25 @@
 
                 <ImageButton
                     android:id="@+id/imageButton16"
-                    style="@style/ObjectCategoryButtons"
+                    style="@style/SharePointsButtons"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="8dp"
                     android:layout_weight="1"
+                    android:onClick="launchCategory"
                     android:paddingTop="8dp"
                     app:srcCompat="@drawable/sport"/>
 
                 <ImageButton
                     android:id="@+id/imageButton17"
-                    style="@style/ObjectCategoryButtons"
+                    style="@style/SharePointsButtons"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="4dp"
                     android:layout_marginBottom="8dp"
                     android:layout_weight="1"
+                    android:onClick="launchCategory"
                     android:paddingTop="20dp"
                     app:srcCompat="@drawable/laptop"/>
             </LinearLayout>
@@ -101,23 +105,25 @@
 
                 <ImageButton
                     android:id="@+id/imageButton18"
-                    style="@style/ObjectCategoryButtons"
+                    style="@style/SharePointsButtons"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="8dp"
                     android:layout_weight="1"
+                    android:onClick="launchCategory"
                     android:paddingTop="15dp"
                     app:srcCompat="@drawable/home_appliance"/>
 
                 <ImageButton
                     android:id="@+id/imageButton19"
-                    style="@style/ObjectCategoryButtons"
+                    style="@style/SharePointsButtons"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="4dp"
                     android:layout_marginBottom="8dp"
                     android:layout_weight="1"
+                    android:onClick="launchCategory"
                     android:paddingTop="10dp"
                     app:srcCompat="@drawable/books"/>
             </LinearLayout>
@@ -129,21 +135,23 @@
 
                 <ImageButton
                     android:id="@+id/imageButton20"
-                    style="@style/ObjectCategoryButtons"
+                    style="@style/SharePointsButtons"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="4dp"
                     android:layout_weight="1"
+                    android:onClick="launchCategory"
                     android:paddingTop="8dp"
                     app:srcCompat="@drawable/clothes"/>
 
                 <ImageButton
                     android:id="@+id/imageButton21"
-                    style="@style/ObjectCategoryButtons"
+                    style="@style/SharePointsButtons"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="4dp"
                     android:layout_weight="1"
+                    android:onClick="launchCategory"
                     android:paddingTop="8dp"
                     app:srcCompat="@drawable/divers"/>
 

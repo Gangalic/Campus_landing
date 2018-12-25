@@ -32,6 +32,10 @@
         <activity android:name=".ProfileActivity"/>
         <activity android:name=".ObjectCategoryActivity">
         </activity>
+        <activity android:name=".SpecificCategoryActivity">
+        </activity>
+        <activity android:name=".NewObjectActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -92,6 +92,11 @@
     <string name="cuisine4">Passoire</string>
     <string name="cuisine5">Moules</string>
     <string name="cuisine6">Autre</string>
+    <string name="hint_repeat_password">Retapez votre mot de passe</string>
+    <string name="repeat_password">Confirmation</string>
+    <string name="question_object_to_lend">As-tu des objets à prêter ?</string>
+    <string name="later">Plus tard</string>
+    <string name="yes">Oui</string>
 
 </resources>
 
