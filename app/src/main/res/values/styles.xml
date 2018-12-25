@@ -38,6 +38,7 @@
         <item name="android:textSize">@dimen/titleSize</item>
     </style>
 
+    <!-- Round button style -->
     <style name="SharePointsButtons" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/round_button</item>
     </style>

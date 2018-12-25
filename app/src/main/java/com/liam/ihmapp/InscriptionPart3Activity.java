@@ -11,6 +11,8 @@ public class InscriptionPart3Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inscription_part3);
+
+        Intent intent = getIntent();
     }
 
     public void launchHomePage(View view) {
@@ -18,4 +20,8 @@ public class InscriptionPart3Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void launchObjectCategory(View view) {
+        Intent intent = new Intent(this, ObjectCategoryActivity.class);
+        startActivity(intent);
+    }
 }
