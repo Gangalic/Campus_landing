@@ -43,29 +43,58 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="179dp">
 
-                <ImageButton
-                    android:id="@+id/imageButton9"
-                    style="@style/SharePointsButtons"
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:onClick="launchCategory"
-                    android:paddingTop="8dp"
-                    app:srcCompat="@drawable/kitchen"/>
+                    android:layout_weight="1">
 
-                <ImageButton
-                    android:id="@+id/imageButton12"
-                    style="@style/SharePointsButtons"
+                    <ImageButton
+                        android:id="@+id/cuisine_button"
+                        style="@style/SharePointsButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:onClick="launchCategory"
+                        android:paddingTop="8dp"
+                        app:srcCompat="@drawable/kitchen"/>
+
+                    <ImageView
+                        android:id="@+id/check_cuisine_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitStart"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/check_green"/>
+                </FrameLayout>
+
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:onClick="launchCategory"
-                    android:paddingTop="8dp"
-                    app:srcCompat="@drawable/clean"/>
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/entretien_button"
+                        style="@style/SharePointsButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:onClick="launchCategory"
+                        android:paddingTop="8dp"
+                        app:srcCompat="@drawable/clean"/>
+
+                    <ImageView
+                        android:id="@+id/check_entretien_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitStart"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/check_green"/>
+                </FrameLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -73,29 +102,58 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/imageButton16"
-                    style="@style/SharePointsButtons"
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:onClick="launchCategory"
-                    android:paddingTop="8dp"
-                    app:srcCompat="@drawable/sport"/>
+                    android:layout_weight="1">
 
-                <ImageButton
-                    android:id="@+id/imageButton17"
-                    style="@style/SharePointsButtons"
+                    <ImageButton
+                        android:id="@+id/sport_button"
+                        style="@style/SharePointsButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:onClick="launchCategory"
+                        android:paddingTop="8dp"
+                        app:srcCompat="@drawable/sport"/>
+
+                    <ImageView
+                        android:id="@+id/check_sport_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitStart"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/check_green"/>
+                </FrameLayout>
+
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:onClick="launchCategory"
-                    android:paddingTop="20dp"
-                    app:srcCompat="@drawable/laptop"/>
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/informatique_button"
+                        style="@style/SharePointsButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:onClick="launchCategory"
+                        android:paddingTop="20dp"
+                        app:srcCompat="@drawable/laptop"/>
+
+                    <ImageView
+                        android:id="@+id/check_informatique_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitStart"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/check_green"/>
+                </FrameLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -103,29 +161,58 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/imageButton18"
-                    style="@style/SharePointsButtons"
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:onClick="launchCategory"
-                    android:paddingTop="15dp"
-                    app:srcCompat="@drawable/home_appliance"/>
+                    android:layout_weight="1">
 
-                <ImageButton
-                    android:id="@+id/imageButton19"
-                    style="@style/SharePointsButtons"
+                    <ImageButton
+                        android:id="@+id/electromenager_button"
+                        style="@style/SharePointsButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:onClick="launchCategory"
+                        android:paddingTop="15dp"
+                        app:srcCompat="@drawable/home_appliance"/>
+
+                    <ImageView
+                        android:id="@+id/check_electromenager_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitStart"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/check_green"/>
+                </FrameLayout>
+
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:onClick="launchCategory"
-                    android:paddingTop="10dp"
-                    app:srcCompat="@drawable/books"/>
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/livres_button"
+                        style="@style/SharePointsButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:onClick="launchCategory"
+                        android:paddingTop="10dp"
+                        app:srcCompat="@drawable/books"/>
+
+                    <ImageView
+                        android:id="@+id/check_livres_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitStart"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/check_green"/>
+                </FrameLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -133,27 +220,57 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/imageButton20"
-                    style="@style/SharePointsButtons"
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:layout_weight="1"
-                    android:onClick="launchCategory"
-                    android:paddingTop="8dp"
-                    app:srcCompat="@drawable/clothes"/>
+                    android:layout_weight="1">
 
-                <ImageButton
-                    android:id="@+id/imageButton21"
-                    style="@style/SharePointsButtons"
+                    <ImageButton
+                        android:id="@+id/vetements_button"
+                        style="@style/SharePointsButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:onClick="launchCategory"
+                        android:paddingTop="8dp"
+                        app:srcCompat="@drawable/clothes"/>
+
+                    <ImageView
+                        android:id="@+id/check_vetements_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitStart"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/check_green"/>
+                </FrameLayout>
+
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_weight="1"
-                    android:onClick="launchCategory"
-                    android:paddingTop="8dp"
-                    app:srcCompat="@drawable/divers"/>
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/divers_button"
+                        style="@style/SharePointsButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:onClick="launchCategory"
+                        android:paddingTop="8dp"
+                        app:srcCompat="@drawable/divers"/>
+
+                    <ImageView
+                        android:id="@+id/check_divers_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitStart"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/check_green"/>
+                </FrameLayout>
 
             </LinearLayout>
 
