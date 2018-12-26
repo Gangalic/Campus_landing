@@ -58,7 +58,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:onClick="checkObject"
+                        android:onClick="checkObjectClicked"
                         android:paddingTop="8dp"
                         app:srcCompat="@drawable/kitchen"/>
 
@@ -85,7 +85,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:onClick="checkObject"
+                        android:onClick="checkObjectClicked"
                         android:paddingTop="8dp"
                         app:srcCompat="@drawable/clean"/>
 
@@ -118,7 +118,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:onClick="checkObject"
+                        android:onClick="checkObjectClicked"
                         android:paddingTop="8dp"
                         app:srcCompat="@drawable/sport"/>
 
@@ -148,7 +148,7 @@
                         app:srcCompat="@drawable/laptop"/>
 
                     <ImageView
-                        android:id="@+id/autre_cuisine_check_image"
+                        android:id="@+id/autre_check_image"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="top|right"

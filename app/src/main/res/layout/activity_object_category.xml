@@ -274,27 +274,15 @@
 
             </LinearLayout>
 
-            <LinearLayout
+            <Button
+                android:id="@+id/button9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/button10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Plus tard"/>
-
-                <Button
-                    android:id="@+id/button9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Confirmer"/>
-            </LinearLayout>
+                android:onClick="finishRegistration"
+                android:text="Confirmer"/>
         </LinearLayout>
     </ScrollView>
 

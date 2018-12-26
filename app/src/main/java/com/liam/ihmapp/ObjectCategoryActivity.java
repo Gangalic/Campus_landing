@@ -11,6 +11,7 @@ public class ObjectCategoryActivity extends AppCompatActivity {
 
     private static final String keyIntentCheck = "com.liam.IHMApp.SpecificCategoryActivity.CHECKED";
     private static final String keyIntentSpecific = "com.liam.IHMApp.SpecificCategoryActivity.SPECIFIC";
+    public static final int OBJECT_REQUEST = 1;
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName() +"liam";
 
@@ -22,6 +23,20 @@ public class ObjectCategoryActivity extends AppCompatActivity {
     private ImageView mVetementsCheck;
     private ImageView mLivresCheck;
     private ImageView mDiversCheck;
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == OBJECT_REQUEST) {
+            if (resultCode == RESULT_OK) {
+                //Check the new category
+                if(data.hasExtra(keyIntentCheck)) {
+                    String checkedCategory = data.getStringExtra(keyIntentCheck);
+                    checkCategory(checkedCategory);
+                }
+            }
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +57,6 @@ public class ObjectCategoryActivity extends AppCompatActivity {
         }
 
         Intent intent = getIntent();
-
-        //Check the new category
-        if(intent.hasExtra(keyIntentCheck)) {
-            String checkedCategory = intent.getStringExtra(keyIntentCheck);
-            checkCategory(checkedCategory);
-        }
     }
 
     /**
@@ -55,7 +64,7 @@ public class ObjectCategoryActivity extends AppCompatActivity {
      * @param outState
      */
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
         if (mCuisineCheck.getVisibility() == View.VISIBLE) {
@@ -165,7 +174,7 @@ public class ObjectCategoryActivity extends AppCompatActivity {
                 intent.putExtra(keyIntentSpecific,"Divers");
                 break;
         }
-        startActivity(intent);
+        startActivityForResult(intent,OBJECT_REQUEST);
     }
 
     /**
@@ -197,5 +206,10 @@ public class ObjectCategoryActivity extends AppCompatActivity {
         else if(category.equals("Divers")){
             mDiversCheck.setVisibility(View.VISIBLE);
         }
+    }
+
+    public void finishRegistration(View view) {
+        Intent intent = new Intent(this, HomePageActivity.class);
+        startActivity(intent);
     }
 }
