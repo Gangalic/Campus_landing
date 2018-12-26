@@ -34,14 +34,14 @@ public class SpecificCategoryActivity extends AppCompatActivity {
 
     // Shared preferences
     private SharedPreferences mPreferences;
-    private String sharedPrefFileCuisine = "com.liam.android.IHMApp.CUISINE";
-    private String sharedPrefFileEntretien = "com.liam.android.IHMApp.ENTRETIEN";
-    private String sharedPrefFileSport = "com.liam.android.IHMApp.SPORT";
-    private String sharedPrefFileInformatique = "com.liam.android.IHMApp.INFORMATIQUE";
-    private String sharedPrefFileVetements = "com.liam.android.IHMApp.VETEMENTS";
-    private String sharedPrefFileElectromenager = "com.liam.android.IHMApp.ELECTROMENAGER";
-    private String sharedPrefFileDivers = "com.liam.android.IHMApp.DIVERS";
-    private String sharedPrefFileLivres = "com.liam.android.IHMApp.LIVRES";
+    private static final String sharedPrefFileCuisine = "com.liam.android.IHMApp.CUISINE";
+    private static final String sharedPrefFileEntretien = "com.liam.android.IHMApp.ENTRETIEN";
+    private static final String sharedPrefFileSport = "com.liam.android.IHMApp.SPORT";
+    private static final String sharedPrefFileInformatique = "com.liam.android.IHMApp.INFORMATIQUE";
+    private static final String sharedPrefFileVetements = "com.liam.android.IHMApp.VETEMENTS";
+    private static final String sharedPrefFileElectromenager = "com.liam.android.IHMApp.ELECTROMENAGER";
+    private static final String sharedPrefFileDivers = "com.liam.android.IHMApp.DIVERS";
+    private static final String sharedPrefFileLivres = "com.liam.android.IHMApp.LIVRES";
 
     /**
      * Result for the added object
