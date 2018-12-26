@@ -6,47 +6,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity$PlaceholderFragment">
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="@string/email_text"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView15"
-        tools:layout_editor_absoluteX="77dp" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="@string/lastname_example"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView14"
-        tools:layout_editor_absoluteX="77dp" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="@string/rating_example"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
-        tools:layout_editor_absoluteX="77dp" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="@string/points_example"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView17"
-        tools:layout_editor_absoluteX="77dp" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="105dp"
-        android:layout_height="26dp"
-        android:text="@string/firstname_example"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
-        tools:layout_editor_absoluteX="77dp" />
+    tools:context=".ProfileActivity">
 
     <TextView
         android:id="@+id/section_label"
@@ -61,50 +21,6 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="60dp"
-        android:layout_height="28dp"
-        android:text="@string/firstname_text"
-        app:layout_constraintStart_toEndOf="@+id/section_label"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="60dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/lastname_text"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        tools:layout_editor_absoluteX="17dp" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="60dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/email_text"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        tools:layout_editor_absoluteX="17dp" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="60dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/rating_text"
-        app:layout_constraintTop_toBottomOf="@+id/textView15"
-        tools:layout_editor_absoluteX="17dp" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="60dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/points_text"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        tools:layout_editor_absoluteX="16dp" />
-
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -114,21 +30,170 @@
         app:layout_constraintGuide_begin="20dp"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView23"
+    <LinearLayout
+        android:id="@+id/linearLayout34"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notifications"
+            android:textSize="@dimen/titleSize"
+            tools:layout_editor_absoluteX="39dp"
+            tools:layout_editor_absoluteY="35dp"/>
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Date de rendu d'un objet emprunté approche"
+            android:textSize="@dimen/pointSize"/>
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Date de rendu d'un objet prêté approche"
+            android:textSize="@dimen/pointSize"/>
+
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Nouvelles demandes d'objets que vous possédez"
+            android:textSize="@dimen/pointSize"/>
+
+        <Switch
+            android:id="@+id/switch4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Toutes les nouvelles demandes"
+            android:textSize="@dimen/pointSize"/>
+
+        <Switch
+            android:id="@+id/switch5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Réception d'un message"
+            android:textSize="@dimen/pointSize"/>
+
+        <Switch
+            android:id="@+id/switch6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Demande acceptée"
+            android:textSize="@dimen/pointSize"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/my_objects_text"
-        app:layout_constraintTop_toBottomOf="@+id/textView17"
-        tools:layout_editor_absoluteX="17dp" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout34"
+        app:layout_constraintVertical_bias="0.152">
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="29dp"
-        android:layout_height="26dp"
-        android:src="@android:drawable/ic_menu_edit"
-        app:layout_constraintTop_toBottomOf="@+id/textView23"
-        tools:layout_editor_absoluteX="108dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton12"
+                style="@style/SquareRoundButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="launchSharePointActivity"
+                android:src="@drawable/ic_smile_white_24dp"/>
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="Donner des points"
+                android:textSize="@dimen/pointSize"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton17"
+                style="@style/SquareRoundButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="launchFAQActivity"
+                android:src="@drawable/question_mark"/>
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="FAQ"
+                android:textSize="@dimen/pointSize"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton16"
+                style="@style/SquareRoundButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="logOut"
+                android:src="@drawable/ic_power_white_24dp"/>
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="Déconnexion"
+                android:textSize="@dimen/pointSize"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

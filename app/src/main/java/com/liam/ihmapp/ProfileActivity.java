@@ -82,6 +82,21 @@ public class ProfileActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void launchSharePointActivity(View view) {
+        Intent intent = new Intent(this, SharePointsActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchFAQActivity(View view) {
+        Intent intent = new Intent(this, FAQActivity.class);
+        startActivity(intent);
+    }
+
+    public void logOut(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
