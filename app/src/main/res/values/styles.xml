@@ -79,4 +79,18 @@
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">@dimen/pointSize</item>
     </style>
+
+    <style name="MessageSentStyle">
+        <item name="android:background">@drawable/chat_message_shape</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="MessageReceivedStyle">
+        <item name="android:background">@drawable/chat_answer_shape</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="ChatEditTextStyle">
+        <item name="android:background">@drawable/chat_write_shape</item>
+    </style>
 </resources>

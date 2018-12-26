@@ -26,12 +26,16 @@ public class HomePageActivity extends AppCompatActivity {
     }
 
     public void launchHomePage(View view) {
-        Intent intent = new Intent(this, HomePageActivity.class);
-        startActivity(intent);
+        //Do nothing because you are already on the home page
     }
 
     public void launchExchanges(View view) {
         Intent intent = new Intent(this, LoansListActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchChat(View view) {
+        Intent intent = new Intent(this, ChatActivity.class);
         startActivity(intent);
     }
 }
