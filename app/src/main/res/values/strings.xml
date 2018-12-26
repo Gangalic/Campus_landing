@@ -63,11 +63,11 @@
     <string name="elementExample">Eco-cup</string>
     <string name="categoryExample">Cuisine</string>
     <string name="dateExample">01.01.2018</string>
-    <string name="categoryMandatory">Categorie *</string>
-    <string name="elementMandatory">Element *</string>
-    <string name="startDateMandatory">Depuis *</string>
-    <string name="comment">Comentaire</string>
-    <string name="periodExample">Temps *</string>
+    <string name="categoryMandatory">Catégorie</string>
+    <string name="elementMandatory">Objet</string>
+    <string name="startDateMandatory">À partir du</string>
+    <string name="comment">Détails complémentaires</string>
+    <string name="periodExample">Pendant</string>
 
     <string name="category">Choix de Catégories</string>
     <string name="category1">Cuisine</string>
@@ -98,8 +98,18 @@
     <string name="later">Plus tard</string>
     <string name="yes">Oui</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="categories_prompt">Choisissez une catégorie</string>
+
+    <string-array name="category_arrays">
+        <item>Cuisine</item>
+        <item>Entretien</item>
+        <item>Sport</item>
+        <item>Informatique</item>
+        <item>Électroménager</item>
+        <item>Vêtements</item>
+        <item>Livres</item>
+        <item>Divers</item>
+    </string-array>
 
 </resources>
 

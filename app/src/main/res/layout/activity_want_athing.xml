@@ -8,53 +8,6 @@
                                              tools:context=".WantAThing">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorRedInsa"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:contentDescription="@drawable/profile_up_icon"
-            android:onClick="launchProfil"
-            android:paddingStart="5dp"
-            android:paddingTop="5dp"
-            android:paddingEnd="5dp"
-            android:paddingBottom="5dp"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/profile_up_icon"/>
-
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="10"/>
-
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="75dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/_10_pts"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textSize="20sp"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout
         android:id="@+id/linearLayout26"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -62,6 +15,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout28"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,15 +28,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/categoryMandatory"
-            android:textSize="18sp"
+            android:textSize="@dimen/pointSize"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/textView14"
             app:layout_constraintTop_toTopOf="parent"/>
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="286dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="60dp"
+            android:entries="@array/category_arrays"
+            android:prompt="@string/categories_prompt"
             app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="130dp"/>
     </LinearLayout>
@@ -95,6 +51,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout29"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,17 +64,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/elementMandatory"
-            android:textSize="18sp"
+            android:textSize="@dimen/pointSize"
+            android:textStyle="bold"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="252dp"/>
 
         <EditText
-            android:id="@+id/editText8"
-            android:layout_width="321dp"
-            android:layout_height="47dp"
+            android:id="@+id/object_name_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/elementExample"
             android:inputType="textPersonName"
+            android:textAlignment="textStart"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="288dp"/>
     </LinearLayout>
@@ -130,7 +89,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
-        android:gravity="center"
+        android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout30"
         app:layout_constraintEnd_toEndOf="parent"
@@ -140,8 +99,10 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginEnd="40dp"
+            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
@@ -149,8 +110,45 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/startDateMandatory"
-                android:textSize="18sp"
+                android:textSize="@dimen/pointSize"
+                android:textStyle="bold"
                 tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="365dp"/>
+
+            <TextView
+                android:id="@+id/date_emprunt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textSize="@dimen/pointSize"
+                />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                style="@style/SharePointsButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="pickADate"
+                android:padding="5dp"
+                app:srcCompat="@drawable/ic_calendar_white_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:text="@string/periodExample"
+                android:textSize="@dimen/pointSize"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="250dp"
                 tools:layout_editor_absoluteY="365dp"/>
 
             <LinearLayout
@@ -159,60 +157,25 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/imageButton9"
-                    style="@style/SharePointsButtons"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="pickADate"
-                    android:padding="5dp"
-                    app:srcCompat="@drawable/ic_calendar_white_24dp"/>
-
-                <TextView
-                    android:id="@+id/date_emprunt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="Sélectionne une date"/>
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="wrap_content"
-                android:layout_height="29dp"
-                android:text="@string/periodExample"
-                android:textSize="18sp"
-                tools:layout_editor_absoluteX="250dp"
-                tools:layout_editor_absoluteY="365dp"/>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
                 <EditText
-                    android:id="@+id/editText7"
+                    android:id="@+id/days_edittext"
                     android:layout_width="52dp"
-                    android:layout_height="40dp"
+                    android:layout_height="match_parent"
                     android:ems="10"
                     android:hint="2"
                     android:inputType="number"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
                     tools:layout_editor_absoluteX="237dp"
                     tools:layout_editor_absoluteY="394dp"/>
 
                 <TextView
                     android:id="@+id/textView18"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:text="jours"
+                    android:textSize="@dimen/pointSize"
                     tools:layout_editor_absoluteX="289dp"
                     tools:layout_editor_absoluteY="409dp"/>
             </LinearLayout>
@@ -227,6 +190,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout31"
         app:layout_constraintEnd_toEndOf="parent"
@@ -239,20 +203,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/comment"
-            android:textSize="18sp"
+            android:textSize="@dimen/pointSize"
+            android:textStyle="bold"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="464dp"/>
 
         <EditText
             android:id="@+id/editText4"
-            android:layout_width="318dp"
-            android:layout_height="81dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:ems="10"
+            android:gravity="top"
             android:hint="@string/addCommentExample"
             android:inputType="textMultiLine"
+            android:isScrollContainer="true"
+            android:maxLines="3"
+            android:minLines="3"
             app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="400dp"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -272,11 +242,10 @@
 
         <Button
             android:id="@+id/button3"
-            style="@style/Widget.AppCompat.Button.Colored"
+            style="@style/ButtonStyleRedWhite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="60dp"
-            android:background="@color/colorAccent"
             android:onClick="launchAccueil"
             android:text="ANNULER"
             app:layout_constraintBaseline_toBaselineOf="@+id/button5"
@@ -286,10 +255,9 @@
 
         <Button
             android:id="@+id/button5"
-            style="@style/Widget.Design.FloatingActionButton"
+            style="@style/ButtonStyleRedWhite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
             android:onClick="launchExchanges"
             android:text="VALIDER"
             app:layout_constraintEnd_toEndOf="parent"
@@ -297,6 +265,43 @@
             app:layout_constraintStart_toEndOf="@+id/button3"
             tools:layout_editor_absoluteY="506dp"/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRedInsa"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/person_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_person_24dp"/>
+
+        <TextView
+            android:id="@+id/chatTitle_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Demande"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/titleSize"/>
+
+        <TextView
+            android:id="@+id/points_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/_10_pts"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"/>
     </LinearLayout>
 
 

@@ -10,6 +10,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import static java.lang.String.valueOf;
 
 public class WantAThing extends AppCompatActivity {
@@ -24,27 +29,24 @@ public class WantAThing extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_want_athing);
 
-        element = findViewById(R.id.editText8);
+        element = findViewById(R.id.object_name_edittext);
         startDate = findViewById(R.id.date_emprunt);
-        period = findViewById(R.id.editText7);
+        period = findViewById(R.id.days_edittext);
+
+        //Set the current date for the start date
+        Calendar cal = Calendar.getInstance();
+        Date date = cal.getTime();
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/YYYY");
+        startDate.setText(dateFormat.format(date));
 
         element.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                element.setBackgroundColor(getResources().getColor(R.color.colorWhite));
-            }
-
-            // unused but declared
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-            @Override
-            public void afterTextChanged(Editable s) {}
-        });
-
-        startDate.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                startDate.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+                if (element.getText().toString().length() <= 0) {
+                    element.setError("Vous devez indiquez le nom de l'objet");
+                } else {
+                    element.setError(null);
+                }
             }
 
             // unused but declared
@@ -57,7 +59,14 @@ public class WantAThing extends AppCompatActivity {
         period.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                period.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+                if (period.getText().toString().length() <= 0) {
+                    period.setError("Vous devez indiquez une durée d'emprunt");
+                }
+                else if(Integer.parseInt(period.getText().toString())<0){
+                    period.setError("La durée de l'emprunt est incorrecte");
+                } else{
+                    period.setError(null);
+                }
             }
 
             // unused but declared
@@ -68,34 +77,53 @@ public class WantAThing extends AppCompatActivity {
         });
     }
 
+    /**
+     * Check if the different fields are correct
+     * @return
+     */
     private boolean checkFields(){
         String el = valueOf(element.getText().toString());
         String sDate = valueOf(startDate.getText().toString());
         String per = valueOf(period.getText().toString());
 
-        if (el.length() == 0 || sDate.length() == 0 || per.length() == 0){
-            if(el.length() == 0)
-                element.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            if(sDate.length() == 0)
-                startDate.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            if(per.length() == 0)
-                period.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+        if (el.length() == 0 || per.length() == 0 || Integer.parseInt(per)<0){
+            if (element.getText().toString().trim().equalsIgnoreCase("")) {
+                element.setError("Vous devez indiquez le nom de l'objet");
+            }
+            if (period.getText().toString().trim().equalsIgnoreCase("")) {
+                period.setError("Vous devez indiquez une durée d'emprunt");
+            }
+            if (period.getText().toString().trim().equalsIgnoreCase("")) {
+                period.setError("La durée de l'emprunt est incorrecte");
+            }
             return false;
         } else {
             return true;
         }
     }
 
+    /**
+     * Launch the profile of the user
+     * @param view
+     */
     public void launchProfil(View view) {
         Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Launch the Home page
+     * @param view
+     */
     public void launchAccueil(View view) {
         Intent intent = new Intent(this, HomePageActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Launch the Exchanges of the user
+     * @param view
+     */
     public void launchExchanges(View view) {
         if (checkFields()) {
             Intent intent = new Intent(this, LoansListActivity.class);
@@ -103,6 +131,12 @@ public class WantAThing extends AppCompatActivity {
         }
     }
 
+    /**
+     * Update the startDate TextView with the selected date
+     * @param year
+     * @param month
+     * @param day
+     */
     public void processDatePickerResult(int year, int month, int day) {
         String month_string = Integer.toString(month+1);
         String day_string = Integer.toString(day);
@@ -112,10 +146,15 @@ public class WantAThing extends AppCompatActivity {
         startDate.setText(dateMessage);
     }
 
+    /**
+     * Launch the DatePicker
+     * @param view
+     */
     public void pickADate(View view) {
         DialogFragment newFragment = new DatePickerFragment();
-        newFragment.show(getSupportFragmentManager(),"Sélectionnez une date");
+        newFragment.show(getSupportFragmentManager(),"datePicker");
     }
+
 }
 
 

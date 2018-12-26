@@ -2,17 +2,12 @@ package com.liam.ihmapp;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.content.Context;
-import android.net.Uri;
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.DatePicker;
-import android.widget.TextView;
 
 import java.util.Calendar;
 
@@ -31,7 +26,10 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
         int day = c.get(Calendar.DAY_OF_MONTH);
 
         // Create a new instance of DatePickerDialog and return it.
-        return new DatePickerDialog(getActivity(), this, year, month, day);
+
+        DatePickerDialog datePick = new DatePickerDialog(getActivity(),R.style.DatePickerDialogTheme, this, year, month, day);
+        datePick.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+        return datePick;
     }
 
     @Override
