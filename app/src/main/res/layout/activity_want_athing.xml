@@ -281,6 +281,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:onClick="launchProfile"
             app:srcCompat="@drawable/ic_person_24dp"/>
 
         <TextView

@@ -155,6 +155,10 @@ public class WantAThing extends AppCompatActivity {
         newFragment.show(getSupportFragmentManager(),"datePicker");
     }
 
+    public void launchProfile(View view) {
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
+    }
 }
 
 
