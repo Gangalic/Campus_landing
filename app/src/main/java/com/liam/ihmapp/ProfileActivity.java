@@ -2,6 +2,7 @@ package com.liam.ihmapp;
 
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -95,6 +96,11 @@ public class ProfileActivity extends AppCompatActivity {
     public void logOut(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void launchObjectCategoriesSelection(View view) {
+        Intent intent = new Intent(this, ObjectCategoryActivity.class);
+        ActivityCompat.startActivityForResult(this,intent,0,null);
     }
 
     /**

@@ -208,8 +208,23 @@ public class ObjectCategoryActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Launch the Profile or the Home Page
+     * @param view
+     */
     public void finishRegistration(View view) {
-        Intent intent = new Intent(this, HomePageActivity.class);
+        Intent intent = new Intent();
+
+        //Case we were on the profile activity
+        if (getCallingActivity() != null) {
+            intent = new Intent(this, ProfileActivity.class);
+        }
+
+        //Case we are in the Registration
+        else{
+            intent = new Intent(this, HomePageActivity.class);
+        }
         startActivity(intent);
+
     }
 }
