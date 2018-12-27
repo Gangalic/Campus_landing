@@ -93,4 +93,17 @@
     <style name="ChatEditTextStyle">
         <item name="android:background">@drawable/chat_write_shape</item>
     </style>
+
+    <style name="MyObjectsStyle">
+        <item name="android:background">@drawable/round_square_shape</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textSize">@dimen/pointSize</item>
+
+    </style>
 </resources>
