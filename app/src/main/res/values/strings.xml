@@ -99,6 +99,14 @@
     <string name="yes">Oui</string>
 
     <string name="categories_prompt">Choisissez une catégorie</string>
+    <string name="faq_gagner_points">Pour gagner des points afin de pouvoir emprunter des objets aux autres Insaliens il suffit de prêter des choses à votre tour !  A chaque fois que vous prêtez un objet vous gagnez un point.  Une autre possibilité est de demander à un ami de vous prêter des points, à condition qu\'il lui en reste biensûr !</string>
+    <string name="faq1_title">Comment gagner des points ?</string>
+    <string name="faq2_title">Comment donner des points à un ami ?</string>
+    <string name="faq2_answer">Pour donner des points à un ami qui est à sec c\'est très simple ! Rendez-vous sur votre profil, dans l\'onglet paramètres vous trouverez en bas de la fenêtre l\'option \"Donner des points\". Laissez-vous alors guider par les instructions affichées, validez et bingo !  Attention : il faut que votre ami possède une adresse email insa pour lui donner des points.</string>
+    <string name="faq3_title">Comment ajouter un nouvel objet à prêter?</string>
+    <string name="faq3_answer">Vous disposez d\'un objet que vous aimeriez prêter aux autres Insaliens ? Pour ajouter ce nouvel objet à votre compte, rendez-vous dans votre profil. En bas de votre profil, vous trouverez une liste de vos objets déjà enregistrés. Pour ajouter un nouvel objet, tapez sur le bouton editer et laissez-vous guider !</string>
+    <string name="faq4_title">Comment faire pour noter quelqu\'un après un échange?</string>
+    <string name="faq4_answer">Après l\'échange, seul le prêteur peut noter l\'autre. Pour cela il suffit de valider que l\'échange est bien terminé et vous serez automatiquement rediriger vers la page de notation. Soyez positif !</string>
 
     <string-array name="category_arrays">
         <item>Cuisine</item>

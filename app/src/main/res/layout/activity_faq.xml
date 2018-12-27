@@ -32,7 +32,7 @@
             android:gravity="center"
             android:text="@string/faq"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/pointSize"/>
+            android:textSize="@dimen/titleSize"/>
 
         <TextView
             android:id="@+id/points_text"
@@ -93,11 +93,10 @@
 
     <ScrollView
         android:layout_width="0dp"
-        android:layout_height="434dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,15 +112,15 @@
             <LinearLayout
                 android:id="@+id/faq1_layout"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:animateLayoutChanges="true"
-                android:background="@android:color/white"
                 android:orientation="vertical"
                 tools:layout_editor_absoluteX="103dp"
                 tools:layout_editor_absoluteY="73dp">
 
                 <LinearLayout
+                    style="@style/FAQTitleStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -133,7 +132,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Comment gagner des points ?"
+                        android:text="@string/faq1_title"
+                        android:textColor="@color/colorWhite"
                         android:textSize="20sp"/>
 
                     <ImageView
@@ -141,29 +141,30 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
-                        app:srcCompat="@drawable/ic_faq_hidden_24dp"/>
+                        app:srcCompat="@drawable/ic_hide_white_24dp"/>
 
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView41"
+                    android:id="@+id/faq_answer1"
+                    style="@style/FAQAnswerStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Pour gagner des points afin de pouvoir emprunter des objets aux autres Insaliens il suffit de prêter des choses à votre tour ! \nA chaque fois que vous prêtez un objet vous gagnez un point. \nUne autre possibilité est de demander à un ami de vous prêter des points, à condition qu\'il lui en reste biensûr !"/>
+                    android:layout_height="0dp"
+                    android:text="@string/faq_gagner_points"/>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/faq2_layout"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:animateLayoutChanges="true"
-                android:background="@android:color/white"
                 android:orientation="vertical"
                 tools:layout_editor_absoluteX="103dp"
                 tools:layout_editor_absoluteY="73dp">
 
                 <LinearLayout
+                    style="@style/FAQTitleStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -175,7 +176,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Comment donner des points à un ami ?"
+                        android:text="@string/faq2_title"
+                        android:textColor="@color/colorWhite"
                         android:textSize="20sp"/>
 
                     <ImageView
@@ -183,32 +185,34 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
-                        app:srcCompat="@drawable/ic_faq_hidden_24dp"/>
+                        app:srcCompat="@drawable/ic_hide_white_24dp"/>
 
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView42"
+                    android:id="@+id/faq_answer2"
+                    style="@style/FAQAnswerStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Pour donner des points à un ami qui est à sec c'est très simple !\nRendez-vous sur votre profil, dans l'onglet paramètres vous trouverez en bas de la fenêtre l'option &quot;Donner des points&quot;.\nLaissez-vous alors guider par les instructions affichées, validez et bingo !\n\nAttention : il faut que votre ami possède une adresse email insa pour lui donner des points."/>
+                    android:layout_height="0dp"
+                    android:text="@string/faq2_answer"/>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/faq3_layout"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:animateLayoutChanges="true"
-                android:background="@android:color/white"
                 android:orientation="vertical"
                 tools:layout_editor_absoluteX="103dp"
                 tools:layout_editor_absoluteY="73dp">
 
                 <LinearLayout
+                    style="@style/FAQTitleStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:onClick="expandFAQ2"
+                    android:onClick="expandFAQ3"
                     android:orientation="horizontal">
 
                     <TextView
@@ -216,7 +220,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Comment ajouter un nouvel objet à prêter?"
+                        android:text="@string/faq3_title"
+                        android:textColor="@color/colorWhite"
                         android:textSize="20sp"/>
 
                     <ImageView
@@ -224,15 +229,60 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
-                        app:srcCompat="@drawable/ic_faq_hidden_24dp"/>
+                        app:srcCompat="@drawable/ic_hide_white_24dp"/>
 
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView43"
+                    android:id="@+id/faq3_answer"
+                    style="@style/FAQAnswerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="@string/faq3_answer"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/faq4_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="103dp"
+                tools:layout_editor_absoluteY="73dp">
+
+                <LinearLayout
+                    style="@style/FAQTitleStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Vous disposez d'un objet que vous aimeriez prêter aux autres Insaliens ?\nPour ajouter ce nouvel objet à votre compte, rendez-vous dans votre profil. En bas de votre profil, vous trouverez une liste de vos objets déjà enregistrés. Pour ajouter un nouvel objet, tapez sur le bouton editer et laissez-vous guider !"/>
+                    android:gravity="center"
+                    android:onClick="expandFAQ4"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/faq4_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/faq4_title"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"/>
+
+                    <ImageView
+                        android:id="@+id/faq_img_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        app:srcCompat="@drawable/ic_hide_white_24dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/faq4_answer"
+                    style="@style/FAQAnswerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="@string/faq4_answer"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
