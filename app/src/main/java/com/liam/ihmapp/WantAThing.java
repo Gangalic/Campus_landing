@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -155,8 +156,8 @@ public class WantAThing extends AppCompatActivity {
         newFragment.show(getSupportFragmentManager(),"datePicker");
     }
 
-    public void launchProfile(View view) {
-        Intent intent = new Intent(this, ProfileActivity.class);
+    public void goBack(View view) {
+        Intent intent = new Intent(this, HomePageActivity.class);
         startActivity(intent);
     }
 }

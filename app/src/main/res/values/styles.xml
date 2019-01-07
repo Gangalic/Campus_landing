@@ -57,6 +57,7 @@
     <!-- Round button style -->
     <style name="SharePointsButtons" parent="Widget.AppCompat.ImageButton">
         <item name="android:background">@drawable/round_square_shape</item>
+        <item name="android:elevation">6dp</item>
     </style>
 
     <style name="SquareRoundButtons" parent="Widget.AppCompat.Button">
@@ -73,6 +74,8 @@
 
     <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner">
         <item name="android:background">@drawable/round_square_shape</item>
+        <item name="android:elevation">6dp</item>
+
     </style>
 
     <style name="SpinnerItemStyle" parent="Widget.AppCompat.TextView.SpinnerItem">
@@ -83,11 +86,13 @@
     <style name="MessageSentStyle">
         <item name="android:background">@drawable/chat_message_shape</item>
         <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:elevation">6dp</item>
     </style>
 
     <style name="MessageReceivedStyle">
         <item name="android:background">@drawable/chat_answer_shape</item>
         <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:elevation">6dp</item>
     </style>
 
     <style name="ChatEditTextStyle">
@@ -104,12 +109,24 @@
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
         <item name="android:textSize">@dimen/pointSize</item>
+        <item name="android:elevation">6dp</item>
+    </style>
+
+    <style name="MyLoanStyle" parent="MyObjectsStyle">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:elevation">6dp</item>
+    </style>
+
+    <style name="MyLoanStyleWhite" parent="MyObjectsStyle">
+        <item name="android:background">@drawable/round_rectangle_white_shape</item>
     </style>
 
     <style name="FAQTitleStyle">
         <item name="android:background">@drawable/faq_title_shape</item>
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:padding">5dp</item>
+
     </style>
 
     <style name="FAQAnswerStyle">

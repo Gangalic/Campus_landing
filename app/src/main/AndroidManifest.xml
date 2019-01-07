@@ -20,16 +20,18 @@
         <activity android:name=".InscriptionPart2Activity"/>
         <activity android:name=".InscriptionPart3Activity"/>
         <activity android:name=".ChatActivity"/>
-        <activity android:name=".WantAThing"/>
+        <activity android:name=".WantAThing"
+                  android:parentActivityName=".HomePageActivity"/>
         <activity android:name=".HomePageActivity"/>
         <activity
             android:name=".LoansListActivity"
             android:label="@string/title_activity_loans_list"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:parentActivityName=".HomePageActivity"/>
         <activity android:name=".RatingActivity"/>
         <activity android:name=".SharePointsActivity"/>
         <activity android:name=".FAQActivity"/>
-        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".ProfileActivity"
+                  android:parentActivityName=".HomePageActivity"/>
         <activity android:name=".ObjectCategoryActivity">
         </activity>
         <activity android:name=".SpecificCategoryActivity">

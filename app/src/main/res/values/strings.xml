@@ -36,8 +36,8 @@
     <string name="demande">Demande</string>
     <string name="accueil">Accueil</string>
     <string name="echanges">Echanges</string>
-    <string name="emprents">Mes emprunts</string>
-    <string name="prets">Mes prets</string>
+    <string name="emprents">Emprunts</string>
+    <string name="prets">Prêts</string>
     <string name="Casserole">Casserole</string>
     <string name="validateimage">validateImage</string>
     <string name="cancelimage">cancelImage</string>
