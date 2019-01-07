@@ -29,7 +29,7 @@
     <string name="my_objects_text">Mes objets</string>
 
     <string name="_10_pts">10 pts</string>
-    <string name="pour_toi">Pour toi</string>
+    <string name="pour_toi">Mes notifications</string>
     <string name="profile_image">profile_image</string>
     <string name="title_activity_loans_list">LoansListActivity</string>
     <string name="action_settings">Settings</string>
@@ -49,7 +49,7 @@
     <string name="chaise">Chaise</string>
     <string name="passoire">Passoire</string>
     <string name="jean">Jean</string>
-    <string name="pour_tous">Pour tous</string>
+    <string name="pour_tous">Notifications générales</string>
     <string name="_3">3</string>
     <string name="matelas">Matelas</string>
     <string name="caroline">Caroline</string>

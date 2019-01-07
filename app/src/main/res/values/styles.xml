@@ -135,4 +135,12 @@
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:layout_marginTop">8dp</item>
     </style>
+
+    <style name="HomePageStyle">
+        <item name="android:background">@drawable/round_rectangle_black_shape</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
 </resources>
