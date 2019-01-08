@@ -7,6 +7,53 @@
                                              android:background="@color/colorWhite"
                                              tools:context=".WantAThing">
 
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRedInsa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView77"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:text="Demande"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/titleSize"/>
+
+        <TextView
+            android:id="@+id/textView81"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="false"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="7 pts"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/pointSize"/>
+
+        <ImageButton
+            android:id="@+id/imageButton18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:background="@android:color/transparent"
+            android:onClick="goBack"
+            app:srcCompat="@drawable/ic_arrow_back_white_24dp"/>
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/linearLayout26"
         style="@style/MyLoanStyle"
@@ -281,53 +328,6 @@
             tools:layout_editor_absoluteY="506dp"/>
 
     </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorRedInsa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView77"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1"
-            android:text="Demande"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/titleSize"/>
-
-        <TextView
-            android:id="@+id/textView81"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerInParent="false"
-            android:layout_centerHorizontal="false"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            android:text="7 pts"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/pointSize"/>
-
-        <ImageButton
-            android:id="@+id/imageButton18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="16dp"
-            android:background="@android:color/transparent"
-            android:onClick="goBack"
-            app:srcCompat="@drawable/ic_arrow_back_white_24dp"/>
-    </RelativeLayout>
 
 
 </android.support.constraint.ConstraintLayout>
