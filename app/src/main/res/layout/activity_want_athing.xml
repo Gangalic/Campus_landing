@@ -9,12 +9,15 @@
 
     <LinearLayout
         android:id="@+id/linearLayout26"
-        android:layout_width="0dp"
+        style="@style/MyLoanStyle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout28"
@@ -27,7 +30,9 @@
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="@string/categoryMandatory"
+            android:textColor="@color/colorWhite"
             android:textSize="@dimen/pointSize"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/textView14"
@@ -38,6 +43,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:entries="@array/category_arrays"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
             android:prompt="@string/categories_prompt"
             app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="130dp"/>
@@ -45,12 +52,13 @@
 
     <LinearLayout
         android:id="@+id/linearLayout28"
+        style="@style/MyLoanStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout29"
@@ -64,6 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/elementMandatory"
+            android:textColor="@color/colorWhite"
             android:textSize="@dimen/pointSize"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="35dp"
@@ -71,12 +80,14 @@
 
         <EditText
             android:id="@+id/object_name_edittext"
+            style="@style/MyLoanStyleWhite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/elementExample"
+            android:hint="Le nom de l'objet"
             android:inputType="textPersonName"
             android:textAlignment="textStart"
+            android:textColor="@color/colorBlackInsa"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="288dp"/>
     </LinearLayout>
@@ -85,10 +96,8 @@
         android:id="@+id/linearLayout29"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout30"
@@ -98,10 +107,9 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout28">
 
         <LinearLayout
+            style="@style/MyLoanStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="40dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -110,6 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/startDateMandatory"
+                android:textColor="@color/colorWhite"
                 android:textSize="@dimen/pointSize"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="35dp"
@@ -117,27 +126,22 @@
 
             <TextView
                 android:id="@+id/date_emprunt"
+                style="@style/MyLoanStyleWhite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="X"
-                android:textSize="@dimen/pointSize"
-                />
-
-            <ImageButton
-                android:id="@+id/imageButton9"
-                style="@style/SharePointsButtons"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:onClick="pickADate"
-                android:padding="5dp"
-                app:srcCompat="@drawable/ic_calendar_white_24dp"/>
+                android:text="X"
+                android:textColor="@color/colorBlackInsa"
+                android:textSize="@dimen/pointSize"/>
 
         </LinearLayout>
 
         <LinearLayout
+            style="@style/MyLoanStyle"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -146,6 +150,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="29dp"
                 android:text="@string/periodExample"
+                android:textColor="@color/colorWhite"
                 android:textSize="@dimen/pointSize"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="250dp"
@@ -153,28 +158,31 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/days_edittext"
-                    android:layout_width="52dp"
-                    android:layout_height="match_parent"
-                    android:ems="10"
-                    android:hint="2"
+                    style="@style/MyLoanStyleWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="3"
+                    android:hint="@string/_2"
                     android:inputType="number"
                     android:textAlignment="center"
+                    android:textColor="@color/colorBlackInsa"
                     android:textStyle="bold"
                     tools:layout_editor_absoluteX="237dp"
                     tools:layout_editor_absoluteY="394dp"/>
 
                 <TextView
                     android:id="@+id/textView18"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="jours"
+                    android:textColor="@color/colorWhite"
                     android:textSize="@dimen/pointSize"
                     tools:layout_editor_absoluteX="289dp"
                     tools:layout_editor_absoluteY="409dp"/>
@@ -185,11 +193,15 @@
 
     <LinearLayout
         android:id="@+id/linearLayout30"
+        style="@style/MyLoanStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout31"
@@ -203,6 +215,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/comment"
+            android:textColor="@color/colorWhite"
             android:textSize="@dimen/pointSize"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="35dp"
@@ -210,6 +223,7 @@
 
         <EditText
             android:id="@+id/editText4"
+            style="@style/MyLoanStyleWhite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -220,6 +234,7 @@
             android:isScrollContainer="true"
             android:maxLines="3"
             android:minLines="3"
+            android:textColor="@color/colorBlackInsa"
             app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="400dp"/>
 

@@ -20,8 +20,9 @@
         <activity android:name=".InscriptionPart2Activity"/>
         <activity android:name=".InscriptionPart3Activity"/>
         <activity android:name=".ChatActivity"/>
-        <activity android:name=".WantAThing"
-                  android:parentActivityName=".HomePageActivity"/>
+        <activity
+            android:name=".WantAThing"
+            android:parentActivityName=".HomePageActivity"/>
         <activity android:name=".HomePageActivity"/>
         <activity
             android:name=".LoansListActivity"
@@ -30,13 +31,18 @@
         <activity android:name=".RatingActivity"/>
         <activity android:name=".SharePointsActivity"/>
         <activity android:name=".FAQActivity"/>
-        <activity android:name=".ProfileActivity"
-                  android:parentActivityName=".HomePageActivity"/>
+        <activity
+            android:name=".ProfileActivity"
+            android:parentActivityName=".HomePageActivity"/>
         <activity android:name=".ObjectCategoryActivity">
         </activity>
         <activity android:name=".SpecificCategoryActivity">
         </activity>
         <activity android:name=".NewObjectActivity">
+        </activity>
+        <activity android:name=".ChatLoanActivity">
+        </activity>
+        <activity android:name=".ChatEmptyActivity">
         </activity>
     </application>
 

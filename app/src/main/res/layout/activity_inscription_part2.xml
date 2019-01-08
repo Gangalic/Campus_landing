@@ -28,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="60dp"
+            android:background="@drawable/round_rectangle_black_shape"
             android:onClick="launchBack"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,6 +39,7 @@
             style="@style/SquareRoundButtons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/round_rectangle_black_shape"
             android:onClick="launchInscriptionPart3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -58,6 +60,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
+        style="@style/MyLoanStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -77,31 +80,27 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:text="@string/repeat_password"
+            android:textColor="@color/colorWhite"
             tools:layout_editor_absoluteX="32dp"
             tools:layout_editor_absoluteY="340dp"/>
 
         <EditText
             android:id="@+id/repeatPassword"
+            style="@style/MyLoanStyleWhite"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/hint_repeat_password"
             android:inputType="textPassword"
+            android:textColor="@color/colorBlackInsa"
             tools:layout_editor_absoluteX="103dp"
             tools:layout_editor_absoluteY="370dp"/>
 
-        <TextView
-            android:id="@+id/passwordErrorMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorRedInsa"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="208dp"
-            tools:layout_editor_absoluteY="430dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout5"
+        style="@style/MyLoanStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -120,16 +119,19 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:text="@string/password"
+            android:textColor="@color/colorWhite"
             tools:layout_editor_absoluteX="32dp"
             tools:layout_editor_absoluteY="260dp"/>
 
         <EditText
             android:id="@+id/insertPassword"
+            style="@style/MyLoanStyleWhite"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:ems="10"
             android:hint="@string/hint_password"
             android:inputType="textPassword"
+            android:textColor="@color/colorBlackInsa"
             tools:layout_editor_absoluteX="138dp"
             tools:layout_editor_absoluteY="294dp"/>
 

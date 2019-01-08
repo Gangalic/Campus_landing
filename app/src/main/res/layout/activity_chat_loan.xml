@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ChatActivity">
+    tools:context=".ChatLoanActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,16 +21,20 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
+            android:onClick="launchLoans"
             android:padding="4dp"
-            app:srcCompat="@drawable/ic_person_white"/>
+            app:srcCompat="@drawable/ic_arrow_back_white_24dp"/>
 
         <TextView
             android:id="@+id/chatTitle_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:layout_weight="1"
             android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
             android:text="@string/chat"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/titleSize"/>
@@ -95,71 +99,19 @@
                 android:textSize="@dimen/pointSize"/>
         </LinearLayout>
 
-        <LinearLayout
+        <Button
+            android:id="@+id/button10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="12dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle_green_shape"
+            android:onClick="launchRating"
+            android:text="Terminer"/>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingTop="4dp">
-
-                <ImageButton
-                    android:id="@+id/accept_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/round_rectangle_green_shape"
-                    android:onClick="launchLoans"
-                    android:padding="6dp"
-                    app:srcCompat="@drawable/ic_done_24dp"/>
-
-                <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Accepter"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="10sp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingTop="4dp">
-
-                <ImageButton
-                    android:id="@+id/cancel_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/round_rectangle_red_shape"
-                    android:onClick="backHome"
-                    android:padding="6dp"
-                    app:srcCompat="@drawable/ic_clear_24dp"/>
-
-                <TextView
-                    android:id="@+id/textView19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Refuser"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="10sp"/>
-            </LinearLayout>
-
-        </LinearLayout>
     </RelativeLayout>
 
     <ScrollView
@@ -172,169 +124,169 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="125dp"
-            android:orientation="vertical">
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="125dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/me_chat_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:text="Moi"
+                        android:textAlignment="textEnd"/>
+
+                    <ImageView
+                        android:id="@+id/chat_me_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_circle_provisoire_24dp"/>
+
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/me_chat_text"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/message_text"
+                    style="@style/MessageSentStyle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="7"
-                    android:text="Moi"
-                    android:textAlignment="textEnd"/>
-
-                <ImageView
-                    android:id="@+id/chat_me_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_circle_provisoire_24dp"/>
+                    android:layout_marginRight="50dp"
+                    android:padding="8dp"
+                    android:text="Hey Salut, comment tu vas ? Alors tu as besoin d'une casserole ?"/>
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/message_text"
-                style="@style/MessageSentStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="50dp"
-                android:padding="8dp"
-                android:text="Hey Salut, comment tu vas ? Alors tu as besoin d'une casserole ?"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="125dp"
-            android:orientation="vertical">
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="125dp"
+                android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/chat_him_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_circle_provisoire_24dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/chat_him_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_circle_provisoire_24dp"/>
+
+                    <TextView
+                        android:id="@+id/him_chat_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:text="Théo"
+                        android:textAlignment="viewStart"/>
+
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/him_chat_text"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/message2_text"
+                    style="@style/MessageReceivedStyle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="7"
-                    android:text="Théo"
-                    android:textAlignment="viewStart"/>
+                    android:layout_marginLeft="50dp"
+                    android:padding="8dp"
+                    android:paddingBottom="6dp"
+                    android:text="Yo ! Ça va et toi ? Oui tu me sauverais la vie, la mienne est HS et sans mes pâtes j'ai plus de raison de vivre !"/>
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/message2_text"
-                style="@style/MessageReceivedStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:padding="8dp"
-                android:paddingBottom="6dp"
-                android:text="Yo ! Ça va et toi ? Oui tu me sauverais la vie, la mienne est HS et sans mes pâtes j'ai plus de raison de vivre !"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="125dp"
-            android:orientation="vertical">
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="125dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/me_chat2_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:text="Moi"
+                        android:textAlignment="textEnd"/>
+
+                    <ImageView
+                        android:id="@+id/chat_me2_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_circle_provisoire_24dp"/>
+
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/me_chat2_text"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/message3_text"
+                    style="@style/MessageSentStyle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="7"
-                    android:text="Moi"
-                    android:textAlignment="textEnd"/>
-
-                <ImageView
-                    android:id="@+id/chat_me2_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_circle_provisoire_24dp"/>
+                    android:layout_marginRight="50dp"
+                    android:padding="8dp"
+                    android:paddingBottom="6dp"
+                    android:text="Ça va aussi merci ! Hahaha Pas de soucis, tu peux passer la récupérer chez moi si tu veux, je suis dispo tout d suite."/>
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/message3_text"
-                style="@style/MessageSentStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="50dp"
-                android:padding="8dp"
-                android:paddingBottom="6dp"
-                android:text="Ça va aussi merci ! Hahaha Pas de soucis, tu peux passer la récupérer chez moi si tu veux, je suis dispo tout d suite."/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="125dp"
-            android:orientation="vertical">
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="125dp"
+                android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/chat_him2_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_circle_provisoire_24dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/chat_him2_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_circle_provisoire_24dp"/>
+
+                    <TextView
+                        android:id="@+id/him2_chat_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:text="Théo"
+                        android:textAlignment="viewStart"/>
+
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/him2_chat_text"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/message4_text"
+                    style="@style/MessageReceivedStyle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="7"
-                    android:text="Théo"
-                    android:textAlignment="viewStart"/>
-
+                    android:layout_marginLeft="50dp"
+                    android:padding="8dp"
+                    android:paddingBottom="6dp"
+                    android:text="Au top merci beaucoup ! Je passe d'ici une quinzaine de minutes alors !"/>
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/message4_text"
-                style="@style/MessageReceivedStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:padding="8dp"
-                android:paddingBottom="6dp"
-                android:text="Au top merci beaucoup ! Je passe d'ici une quinzaine de minutes alors !"/>
-             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

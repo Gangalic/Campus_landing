@@ -15,7 +15,6 @@ public class InscriptionPart2Activity extends AppCompatActivity {
 
     private EditText password;
     private EditText repeatPassword;
-    private TextView errorMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +23,10 @@ public class InscriptionPart2Activity extends AppCompatActivity {
 
         password = findViewById(R.id.insertPassword);
         repeatPassword = findViewById(R.id.repeatPassword);
-        errorMessage = findViewById(R.id.passwordErrorMessage);
 
         password.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                errorMessage.setText("");
                 if (password.getText().toString().length() <= 0) {
                     password.setError("Vous devez renseigner un mot de passe");
                 } else {
@@ -47,9 +44,11 @@ public class InscriptionPart2Activity extends AppCompatActivity {
         repeatPassword.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                errorMessage.setText("");
                 if (repeatPassword.getText().toString().length() <= 0) {
                     repeatPassword.setError("Vous devez confirmer votre mot de passe");
+                }
+                else if(!password.getText().toString().equals(repeatPassword.getText().toString())){
+                    repeatPassword.setError("Les mots de passes doivent être identiques");
                 } else {
                     repeatPassword.setError(null);
                 }
@@ -81,7 +80,7 @@ public class InscriptionPart2Activity extends AppCompatActivity {
             return false;
         }
         else if(!pass1.equals(pass2)){
-            errorMessage.setText("Les mots de passe ne correspondent pas!");
+            password.setError("Les mots de passes doivent être identiques");
             return false;
         } else{
             return true;

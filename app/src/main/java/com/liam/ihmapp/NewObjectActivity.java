@@ -7,12 +7,15 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class NewObjectActivity extends AppCompatActivity {
 
     private EditText mNewObject;
+    private TextView mCategory;
     private boolean mObjectAdded = false;
 
+    private static final String keyIntentCategory = "com.liam.IHMApp.SpecificCategoryActivity.CATEGORY";
     private static final String keyIntentOther = "com.liam.IHMApp.SpecificCategoryActivity.OTHER";
 
     @Override
@@ -21,6 +24,9 @@ public class NewObjectActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_object);
 
         Intent intent = getIntent();
+        String category = intent.getStringExtra(keyIntentCategory);
+        mCategory = (TextView) findViewById(R.id.textView26);
+        mCategory.setText(category);
 
         mNewObject = (EditText) findViewById(R.id.new_object_edittext);
 

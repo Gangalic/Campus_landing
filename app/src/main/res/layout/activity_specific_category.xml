@@ -70,7 +70,8 @@
                         android:adjustViewBounds="true"
                         android:scaleType="fitStart"
                         android:visibility="invisible"
-                        app:srcCompat="@drawable/check_green"/>
+                        app:srcCompat="@drawable/check_green"
+                        android:elevation="10dp"/>
 
                 </FrameLayout>
 
@@ -97,7 +98,8 @@
                         android:adjustViewBounds="true"
                         android:scaleType="fitStart"
                         android:visibility="invisible"
-                        app:srcCompat="@drawable/check_green"/>
+                        app:srcCompat="@drawable/check_green"
+                        android:elevation="10dp"/>
                 </FrameLayout>
 
             </LinearLayout>
@@ -130,7 +132,8 @@
                         android:adjustViewBounds="true"
                         android:scaleType="fitStart"
                         android:visibility="invisible"
-                        app:srcCompat="@drawable/check_green"/>
+                        app:srcCompat="@drawable/check_green"
+                        android:elevation="10dp"/>
                 </FrameLayout>
 
                 <FrameLayout
@@ -155,7 +158,8 @@
                         android:adjustViewBounds="true"
                         android:scaleType="fitStart"
                         android:visibility="invisible"
-                        app:srcCompat="@drawable/check_green"/>
+                        app:srcCompat="@drawable/check_green"
+                        android:elevation="10dp"/>
                 </FrameLayout>
 
             </LinearLayout>

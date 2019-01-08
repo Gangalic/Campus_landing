@@ -86,7 +86,6 @@ public class InscriptionPart1Activity extends AppCompatActivity {
         String lName = valueOf(lastName.getText().toString()).toLowerCase();
 
         eMail.setText(fName + "." + lName);
-        eMail.setBackgroundColor(getResources().getColor(R.color.colorWhite));
     }
 
     private boolean checkFields(){

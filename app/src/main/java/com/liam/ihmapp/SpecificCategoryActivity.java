@@ -23,6 +23,7 @@ public class SpecificCategoryActivity extends AppCompatActivity {
 
     int mObjectSelected = 0;
 
+    private static final String keyIntentCategory = "com.liam.IHMApp.SpecificCategoryActivity.CATEGORY";
     private static final String keyIntentCheck = "com.liam.IHMApp.SpecificCategoryActivity.CHECKED";
     private static final String keyIntentSpecific = "com.liam.IHMApp.SpecificCategoryActivity.SPECIFIC";
     private static final String keyIntentOther = "com.liam.IHMApp.SpecificCategoryActivity.OTHER";
@@ -217,6 +218,7 @@ public class SpecificCategoryActivity extends AppCompatActivity {
      */
     public void newObject(View view) {
         Intent intent = new Intent(this, NewObjectActivity.class);
+        intent.putExtra(keyIntentCategory,mCategoryTitle.getText().toString());
         startActivityForResult(intent,NEW_OBJECT_REQUEST);
     }
 

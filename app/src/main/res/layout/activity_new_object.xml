@@ -23,6 +23,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout24"
+        style="@style/MyLoanStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -40,8 +41,9 @@
             android:id="@+id/textView27"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"
             android:text="Nouvel objet"
+            android:textColor="@color/colorWhite"
             android:textSize="@dimen/titleSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,11 +51,13 @@
 
         <EditText
             android:id="@+id/new_object_edittext"
+            style="@style/MyLoanStyleWhite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Tapez le nom du nouvel objet"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            android:textColor="@color/colorBlackInsa"/>
     </LinearLayout>
 
     <LinearLayout

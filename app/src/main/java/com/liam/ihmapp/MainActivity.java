@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (email.getText().toString().length() <= 0) {
-                    email.setError("Enter FirstName");
+                    email.setError("Veuillez entrer votre email");
                 } else {
                     email.setError(null);
                 }
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (password.getText().toString().length() <= 0) {
-                    password.setError("Enter FirstName");
+                    password.setError("Veuillez entrer votre mot de passe");
                 } else {
                     password.setError(null);
                 }

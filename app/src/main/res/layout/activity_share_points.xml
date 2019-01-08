@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@android:color/transparent"
+            android:onClick="backToSettings"
             app:srcCompat="@drawable/ic_arrow_back_white_24dp"/>
 
         <TextView
@@ -54,10 +55,11 @@
 
     <LinearLayout
         android:id="@+id/linearLayout15"
-        android:layout_width="0dp"
+        style="@style/MyLoanStyle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/textView38"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,8 +71,10 @@
             android:id="@+id/textView36"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginBottom="4dp"
             android:text="Son email INSA"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="16sp"
             android:textStyle="bold"/>
 
@@ -80,20 +84,24 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/editText6"
+                android:id="@+id/email_to_send"
+                style="@style/MyLoanStyleWhite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Tapez son email INSA"
-                android:inputType="textPersonName"/>
+                android:inputType="textPersonName"
+                android:textColor="@color/colorBlackInsa"/>
 
             <TextView
                 android:id="@+id/textView37"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
                 android:layout_weight="1"
                 android:text="\@insa-lyon.fr"
+                android:textColor="@color/colorWhite"
                 android:textSize="16sp"/>
         </LinearLayout>
     </LinearLayout>
@@ -117,7 +125,7 @@
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:onClick="sendPoints"
         android:text="Donner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

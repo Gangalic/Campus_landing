@@ -73,13 +73,13 @@
     </style>
 
     <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner">
-        <item name="android:background">@drawable/round_square_shape</item>
+        <item name="android:background">@drawable/round_rectangle_white_shape</item>
         <item name="android:elevation">6dp</item>
 
     </style>
 
     <style name="SpinnerItemStyle" parent="Widget.AppCompat.TextView.SpinnerItem">
-        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorBlackInsa</item>
         <item name="android:textSize">@dimen/pointSize</item>
     </style>
 

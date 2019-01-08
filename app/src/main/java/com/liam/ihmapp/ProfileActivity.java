@@ -82,6 +82,13 @@ public class ProfileActivity extends AppCompatActivity {
         ActivityCompat.startActivityForResult(this,intent,0,null);
     }
 
+    public void launchGallery(View view) {
+        Intent i = new Intent(Intent.ACTION_PICK,
+                android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        final int ACTIVITY_SELECT_IMAGE = 1234;
+        startActivityForResult(i, ACTIVITY_SELECT_IMAGE);
+    }
+
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.

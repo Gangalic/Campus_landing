@@ -70,6 +70,17 @@ public class LoansListActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void launchChat(View view) {
+        Intent intent = new Intent(this, ChatEmptyActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchChatFinish(View view) {
+        Intent intent = new Intent(this, ChatLoanActivity.class);
+        startActivity(intent);
+    }
+
+
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
@@ -112,4 +123,6 @@ public class LoansListActivity extends AppCompatActivity {
             return null;
         }
     }
+
+
 }

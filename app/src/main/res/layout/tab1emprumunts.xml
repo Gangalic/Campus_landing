@@ -33,6 +33,7 @@
                 style="@style/MyLoanStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:onClick="launchChat"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -89,6 +90,7 @@
                 style="@style/MyLoanStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:onClick="launchChat"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -135,6 +137,7 @@
                 style="@style/MyLoanStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:onClick="launchChat"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -187,6 +190,7 @@
                 style="@style/MyLoanStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:onClick="launchChat"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -243,6 +247,7 @@
                 style="@style/MyLoanStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:onClick="launchChat"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -289,6 +294,7 @@
                 style="@style/MyLoanStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:onClick="launchChat"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -347,6 +353,7 @@
                 style="@style/MyLoanStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:onClick="launchChat"
                 android:orientation="vertical">
 
                 <RelativeLayout
