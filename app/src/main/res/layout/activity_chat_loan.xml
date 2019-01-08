@@ -149,7 +149,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/ic_circle_provisoire_24dp"/>
+                        app:srcCompat="@drawable/profile_picture_girl_little"/>
 
                 </LinearLayout>
 
@@ -182,7 +182,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/ic_circle_provisoire_24dp"/>
+                        app:srcCompat="@drawable/profile_picture_man_little"/>
 
                     <TextView
                         android:id="@+id/him_chat_text"
@@ -231,7 +231,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/ic_circle_provisoire_24dp"/>
+                        app:srcCompat="@drawable/profile_picture_girl_little"/>
 
                 </LinearLayout>
 
@@ -265,7 +265,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/ic_circle_provisoire_24dp"/>
+                        app:srcCompat="@drawable/profile_picture_man_little"/>
 
                     <TextView
                         android:id="@+id/him2_chat_text"
@@ -306,7 +306,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/ic_circle_provisoire_24dp"/>
+                        app:srcCompat="@drawable/profile_picture_man_little"/>
 
                     <TextView
                         android:id="@+id/him3_chat_text"
@@ -356,7 +356,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/ic_circle_provisoire_24dp"/>
+                        app:srcCompat="@drawable/profile_picture_girl_little"/>
 
                 </LinearLayout>
 
