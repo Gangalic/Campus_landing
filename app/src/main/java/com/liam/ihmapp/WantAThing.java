@@ -10,6 +10,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -158,6 +159,13 @@ public class WantAThing extends AppCompatActivity {
 
     public void goBack(View view) {
         Intent intent = new Intent(this, HomePageActivity.class);
+        startActivity(intent);
+    }
+
+    public void sendRequest(View view) {
+        Intent intent = new Intent(this, HomePageActivity.class);
+        Toast confirmSend = Toast.makeText(this,"Demande envoyée !",Toast.LENGTH_SHORT);
+        confirmSend.show();
         startActivity(intent);
     }
 }
