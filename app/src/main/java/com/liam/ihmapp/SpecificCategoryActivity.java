@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +16,9 @@ public class SpecificCategoryActivity extends AppCompatActivity {
     ImageView mCheckPassoire;
     ImageView mCheckAutre;
     TextView mCategoryTitle;
+    ImageButton mCouverts;
+    ImageButton mPoele;
+    ImageButton mPassoire;
 
     boolean mCouvertsVisibility = false;
     boolean mPoeleVisibility = false;
@@ -79,6 +83,9 @@ public class SpecificCategoryActivity extends AppCompatActivity {
         mCheckPassoire = (ImageView) findViewById(R.id.passoire_check_image);
         mCheckAutre = (ImageView) findViewById(R.id.autre_check_image);
         mCategoryTitle = (TextView) findViewById(R.id.category_title);
+        mCouverts = (ImageButton) findViewById(R.id.couvert_button);
+        mPoele = (ImageButton) findViewById(R.id.poele_button);
+        mPassoire = (ImageButton) findViewById(R.id.passoire_button);
 
         if(savedInstanceState != null){
             restoreState(savedInstanceState);
@@ -227,8 +234,52 @@ public class SpecificCategoryActivity extends AppCompatActivity {
      * @param intent
      */
     public void initActivity(Intent intent){
-        mCategoryTitle.setText(intent.getStringExtra(keyIntentSpecific));
+        String category = intent.getStringExtra(keyIntentSpecific);
+        mCategoryTitle.setText(category);
 
+        //Choose the images to display depending on the category
+        if(category.equals("Cuisine")){
+            mCouverts.setImageDrawable(getDrawable(R.drawable.couverts));
+            mPoele.setImageDrawable(getDrawable(R.drawable.tasse));
+            mPassoire.setImageDrawable(getDrawable(R.drawable.pan));
+        }
+        else if(category.equals("Entretien")){
+            mCouverts.setImageDrawable(getDrawable(R.drawable.balais));
+            mPoele.setImageDrawable(getDrawable(R.drawable.aspirateur));
+            mPassoire.setImageDrawable(getDrawable(R.drawable.produits));
+        }
+        else if(category.equals("Sport")){
+            mCouverts.setImageDrawable(getDrawable(R.drawable.ballon));
+            mPoele.setImageDrawable(getDrawable(R.drawable.raquette));
+            mPassoire.setImageDrawable(getDrawable(R.drawable.chrono));
+        }
+        else if(category.equals("Informatique")){
+            mCouverts.setImageDrawable(getDrawable(R.drawable.ordi));
+            mPoele.setImageDrawable(getDrawable(R.drawable.hdmi));
+            mPassoire.setImageDrawable(getDrawable(R.drawable.chargeur));
+        }
+        else if(category.equals("Électroménager")){
+            mCouverts.setImageDrawable(getDrawable(R.drawable.fer));
+            mPoele.setImageDrawable(getDrawable(R.drawable.mix));
+            mPassoire.setImageDrawable(getDrawable(R.drawable.cafe));
+        }
+        else if(category.equals("Livres")){
+            mCouverts.setImageDrawable(getDrawable(R.drawable.roman));
+            mPoele.setImageDrawable(getDrawable(R.drawable.cours));
+            mPassoire.setImageDrawable(getDrawable(R.drawable.bd));
+        }
+        else if(category.equals("Vêtements")){
+            mCouverts.setImageDrawable(getDrawable(R.drawable.shirt));
+            mPoele.setImageDrawable(getDrawable(R.drawable.casquette));
+            mPassoire.setImageDrawable(getDrawable(R.drawable.gants));
+        }
+        else if(category.equals("Divers")){
+            mCouverts.setImageDrawable(getDrawable(R.drawable.chaise));
+            mPoele.setImageDrawable(getDrawable(R.drawable.valise));
+            mPassoire.setImageDrawable(getDrawable(R.drawable.deguisement));
+        }
+
+        // Show or hide the tick
         mPreferences = choosePrefFile(mCategoryTitle.getText().toString());
 
         mCouvertsVisibility = mPreferences.getBoolean(COUVERTS_KEY, false);
